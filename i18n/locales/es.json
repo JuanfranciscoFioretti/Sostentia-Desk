@@ -1,0 +1,382 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "features": "Funcionalidades",
+    "pricing": "Precios",
+    "blog": "Blog",
+    "about": "Nosotros",
+    "support": "Soporte",
+    "getStarted": "Comenzar",
+    "login": "Iniciar Sesión"
+  },
+  "hero": {
+    "title": "Gestiona Tu Negocio con",
+    "titleHighlight": "Sostentia Desk",
+    "subtitle": "La plataforma todo-en-uno que combina una potente aplicación móvil y un panel web completo para optimizar las operaciones de tu negocio.",
+    "cta": {
+      "primary": "Prueba Gratis",
+      "secondary": "Ver Demo"
+    },
+    "stats": {
+      "users": "+10K Usuarios Activos",
+      "rating": "4.9/5 Valoración",
+      "uptime": "99.9% Disponibilidad"
+    }
+  },
+  "features": {
+    "section": {
+      "badge": "Funcionalidades",
+      "title": "Todo Lo Que Necesitas Para Triunfar",
+      "subtitle": "Características potentes diseñadas para negocios modernos"
+    },
+    "list": [
+      {
+        "id": "mobile-app",
+        "title": "Aplicación Móvil Nativa",
+        "description": "Construida con React Native para una experiencia perfecta en iOS y Android. Accede a los datos de tu negocio en cualquier momento y lugar con nuestra aplicación móvil ultrarrápida.",
+        "icon": "smartphone"
+      },
+      {
+        "id": "web-dashboard",
+        "title": "Panel Web Completo",
+        "description": "Dashboard completo en React con analíticas en tiempo real, informes avanzados y visualización intuitiva de datos para tomar decisiones informadas.",
+        "icon": "monitor"
+      },
+      {
+        "id": "real-time-sync",
+        "title": "Sincronización en Tiempo Real",
+        "description": "Todos tus datos se sincronizan instantáneamente entre las plataformas móvil y web. Trabaja sin problemas desde cualquier dispositivo sin perder el ritmo.",
+        "icon": "refresh-cw"
+      },
+      {
+        "id": "team-collaboration",
+        "title": "Colaboración en Equipo",
+        "description": "Invita miembros del equipo, asigna roles y colabora eficientemente con herramientas de comunicación integradas y gestión de permisos.",
+        "icon": "users"
+      },
+      {
+        "id": "advanced-analytics",
+        "title": "Analíticas Avanzadas",
+        "description": "Obtén información profunda sobre tu negocio con informes personalizables, gráficos y seguimiento de KPI que te ayudan a crecer más rápido.",
+        "icon": "bar-chart"
+      },
+      {
+        "id": "secure-cloud",
+        "title": "Seguridad de Nivel Empresarial",
+        "description": "Tus datos están protegidos con encriptación de extremo a extremo, copias de seguridad regulares y cumplimiento con estándares de seguridad internacionales.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "pricing": {
+    "section": {
+      "badge": "Precios",
+      "title": "Elige Tu Plan Perfecto",
+      "subtitle": "Precios transparentes que crecen con tu negocio"
+    },
+    "toggle": {
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "save": "Ahorra 20%"
+    },
+    "plans": [
+      {
+        "id": "starter",
+        "name": "Inicial",
+        "description": "Perfecto para individuos y equipos pequeños que están empezando",
+        "price": {
+          "monthly": 0,
+          "annually": 0
+        },
+        "features": [
+          "Hasta 3 usuarios",
+          "Acceso a aplicación móvil",
+          "Panel web básico",
+          "5GB de almacenamiento",
+          "Soporte por email",
+          "Analíticas básicas"
+        ],
+        "cta": "Comenzar Gratis",
+        "popular": false
+      },
+      {
+        "id": "professional",
+        "name": "Profesional",
+        "description": "Para negocios en crecimiento que necesitan más potencia y flexibilidad",
+        "price": {
+          "monthly": 29,
+          "annually": 279
+        },
+        "features": [
+          "Hasta 15 usuarios",
+          "Acceso completo móvil y web",
+          "Panel avanzado",
+          "50GB de almacenamiento",
+          "Soporte prioritario",
+          "Analíticas avanzadas",
+          "Informes personalizados",
+          "Acceso API",
+          "Herramientas de colaboración"
+        ],
+        "cta": "Iniciar Prueba",
+        "popular": true
+      },
+      {
+        "id": "enterprise",
+        "name": "Empresarial",
+        "description": "Soluciones personalizadas para grandes organizaciones con necesidades específicas",
+        "price": {
+          "monthly": "Personalizado",
+          "annually": "Personalizado"
+        },
+        "features": [
+          "Usuarios ilimitados",
+          "Todas las funciones Profesional",
+          "Almacenamiento ilimitado",
+          "Soporte dedicado 24/7",
+          "Integraciones personalizadas",
+          "Funciones de seguridad avanzadas",
+          "Garantía SLA",
+          "Incorporación y capacitación",
+          "Desarrollo personalizado"
+        ],
+        "cta": "Contactar Ventas",
+        "popular": false
+      }
+    ],
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "question": "¿Puedo cambiar mi plan más tarde?",
+          "answer": "¡Sí! Puedes mejorar o reducir tu plan en cualquier momento. Los cambios tienen efecto inmediato y prorrateamos los cargos."
+        },
+        {
+          "question": "¿Qué métodos de pago aceptan?",
+          "answer": "Aceptamos todas las tarjetas de crédito principales (Visa, MasterCard, American Express), PayPal y transferencias bancarias para planes Empresariales."
+        },
+        {
+          "question": "¿Hay una prueba gratuita?",
+          "answer": "¡Sí! Nuestro plan Profesional incluye una prueba gratuita de 14 días. No se requiere tarjeta de crédito para comenzar."
+        },
+        {
+          "question": "¿Qué pasa con mis datos si cancelo?",
+          "answer": "Puedes exportar todos tus datos en cualquier momento. Después de la cancelación, mantenemos tus datos durante 30 días antes de la eliminación permanente."
+        }
+      ]
+    }
+  },
+  "blog": {
+    "section": {
+      "badge": "Blog y Recursos",
+      "title": "Últimas Novedades",
+      "subtitle": "Mantente actualizado con consejos, tutoriales y noticias del sector"
+    },
+    "readMore": "Leer Más",
+    "readTime": "min de lectura",
+    "categories": {
+      "all": "Todos",
+      "tutorials": "Tutoriales",
+      "updates": "Actualizaciones",
+      "tips": "Consejos y Trucos",
+      "news": "Noticias"
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Nosotros",
+      "title": "Construyendo el Futuro de la Gestión Empresarial",
+      "subtitle": "Estamos en una misión para empoderar a empresas con herramientas intuitivas y potentes que impulsan el crecimiento y la eficiencia."
+    },
+    "story": {
+      "title": "Nuestra Historia",
+      "content": "Fundada en 2024, Sostentia Desk nació de una simple observación: las empresas necesitaban una plataforma unificada que funcionara perfectamente entre móvil y web. Hemos construido una solución que combina la conveniencia del acceso móvil con el poder de las analíticas web completas."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "items": [
+        {
+          "title": "Innovación",
+          "description": "Continuamente empujamos los límites para ofrecer soluciones de vanguardia.",
+          "icon": "lightbulb"
+        },
+        {
+          "title": "Simplicidad",
+          "description": "Los problemas complejos merecen soluciones elegantes y simples.",
+          "icon": "zap"
+        },
+        {
+          "title": "Seguridad",
+          "description": "La seguridad de tus datos es nuestra máxima prioridad, siempre.",
+          "icon": "shield"
+        },
+        {
+          "title": "Soporte",
+          "description": "Estamos aquí para ayudarte a tener éxito, en cada paso del camino.",
+          "icon": "heart"
+        }
+      ]
+    },
+    "team": {
+      "title": "Conoce Nuestro Equipo",
+      "subtitle": "Profesionales apasionados dedicados a tu éxito"
+    }
+  },
+  "support": {
+    "hero": {
+      "badge": "Soporte",
+      "title": "Estamos Aquí Para Ayudar",
+      "subtitle": "Obtén el soporte que necesitas, cuando lo necesitas"
+    },
+    "options": {
+      "title": "Contáctanos",
+      "items": [
+        {
+          "title": "Soporte por Email",
+          "description": "Obtén ayuda por email en 24 horas",
+          "contact": "support@sostenatiadesk.com",
+          "icon": "mail"
+        },
+        {
+          "title": "Chat en Vivo",
+          "description": "Chatea con nuestro equipo en tiempo real",
+          "contact": "Disponible 9 AM - 6 PM EST",
+          "icon": "message-circle"
+        },
+        {
+          "title": "Documentación",
+          "description": "Explora nuestras guías completas",
+          "contact": "Visitar Centro de Ayuda",
+          "icon": "book"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "categories": {
+        "general": "General",
+        "account": "Cuenta",
+        "billing": "Facturación",
+        "technical": "Técnico"
+      }
+    },
+    "form": {
+      "title": "Envíanos un Mensaje",
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "subject": "Asunto",
+      "message": "Tu Mensaje",
+      "submit": "Enviar Mensaje",
+      "success": "¡Mensaje enviado con éxito! Te responderemos pronto.",
+      "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+    }
+  },
+  "register": {
+    "title": "Crea Tu Cuenta",
+    "subtitle": "Comienza tu prueba gratuita de 14 días hoy. No se requiere tarjeta de crédito.",
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo Electrónico",
+      "company": "Nombre de la Empresa",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar Contraseña",
+      "phone": "Teléfono (Opcional)",
+      "useCase": "¿Cómo usarás Sostentia Desk?",
+      "useCaseOptions": {
+        "projectManagement": "Gestión de Proyectos",
+        "customerService": "Servicio al Cliente",
+        "sales": "Ventas y CRM",
+        "operations": "Operaciones",
+        "other": "Otro"
+      },
+      "terms": "Acepto los Términos de Servicio y la Política de Privacidad",
+      "submit": "Crear Cuenta",
+      "submitting": "Creando Cuenta...",
+      "success": "¡Cuenta creada con éxito!",
+      "error": "Error al crear la cuenta. Por favor, inténtalo de nuevo.",
+      "haveAccount": "¿Ya tienes una cuenta?",
+      "login": "Iniciar Sesión"
+    },
+    "validation": {
+      "required": "Este campo es requerido",
+      "email": "Por favor ingresa un correo electrónico válido",
+      "passwordMin": "La contraseña debe tener al menos 8 caracteres",
+      "passwordMatch": "Las contraseñas no coinciden",
+      "terms": "Debes aceptar los términos y condiciones"
+    }
+  },
+  "footer": {
+    "tagline": "Empoderando negocios con soluciones móviles y web perfectamente integradas.",
+    "product": {
+      "title": "Producto",
+      "links": {
+        "features": "Funcionalidades",
+        "pricing": "Precios",
+        "security": "Seguridad",
+        "roadmap": "Hoja de Ruta",
+        "changelog": "Registro de Cambios"
+      }
+    },
+    "company": {
+      "title": "Empresa",
+      "links": {
+        "about": "Nosotros",
+        "careers": "Carreras",
+        "blog": "Blog",
+        "press": "Kit de Prensa",
+        "contact": "Contacto"
+      }
+    },
+    "resources": {
+      "title": "Recursos",
+      "links": {
+        "documentation": "Documentación",
+        "api": "Referencia API",
+        "support": "Soporte",
+        "community": "Comunidad",
+        "status": "Estado"
+      }
+    },
+    "legal": {
+      "title": "Legal",
+      "links": {
+        "privacy": "Política de Privacidad",
+        "terms": "Términos de Servicio",
+        "cookies": "Política de Cookies",
+        "licenses": "Licencias"
+      }
+    },
+    "newsletter": {
+      "title": "Mantente Actualizado",
+      "description": "Recibe las últimas actualizaciones, consejos e información en tu bandeja de entrada.",
+      "placeholder": "Ingresa tu email",
+      "button": "Suscribirse",
+      "success": "¡Gracias por suscribirte!",
+      "error": "Por favor ingresa un email válido"
+    },
+    "social": {
+      "title": "Síguenos"
+    },
+    "copyright": "© 2026 Sostentia Desk. Todos los derechos reservados."
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "retry": "Intentar de Nuevo",
+    "close": "Cerrar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "search": "Buscar...",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "noResults": "No se encontraron resultados",
+    "viewAll": "Ver Todo",
+    "learnMore": "Aprender Más",
+    "getStarted": "Comenzar",
+    "contactUs": "Contáctanos",
+    "backToHome": "Volver al Inicio"
+  }
+}

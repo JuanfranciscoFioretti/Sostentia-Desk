@@ -1,0 +1,382 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "about": "About Us",
+    "support": "Support",
+    "getStarted": "Get Started",
+    "login": "Login"
+  },
+  "hero": {
+    "title": "Manage Your Business with",
+    "titleHighlight": "Sostentia Desk",
+    "subtitle": "The all-in-one platform that combines a powerful mobile app and comprehensive web dashboard to streamline your business operations.",
+    "cta": {
+      "primary": "Start Free Trial",
+      "secondary": "Watch Demo"
+    },
+    "stats": {
+      "users": "10K+ Active Users",
+      "rating": "4.9/5 Rating",
+      "uptime": "99.9% Uptime"
+    }
+  },
+  "features": {
+    "section": {
+      "badge": "Features",
+      "title": "Everything You Need to Succeed",
+      "subtitle": "Powerful features designed for modern businesses"
+    },
+    "list": [
+      {
+        "id": "mobile-app",
+        "title": "Native Mobile App",
+        "description": "Built with React Native for seamless iOS and Android experience. Access your business data anytime, anywhere with our lightning-fast mobile application.",
+        "icon": "smartphone"
+      },
+      {
+        "id": "web-dashboard",
+        "title": "Comprehensive Web Dashboard",
+        "description": "Full-featured React dashboard with real-time analytics, advanced reporting, and intuitive data visualization to make informed decisions.",
+        "icon": "monitor"
+      },
+      {
+        "id": "real-time-sync",
+        "title": "Real-Time Synchronization",
+        "description": "All your data syncs instantly across mobile and web platforms. Work seamlessly from any device without missing a beat.",
+        "icon": "refresh-cw"
+      },
+      {
+        "id": "team-collaboration",
+        "title": "Team Collaboration",
+        "description": "Invite team members, assign roles, and collaborate efficiently with built-in communication tools and permission management.",
+        "icon": "users"
+      },
+      {
+        "id": "advanced-analytics",
+        "title": "Advanced Analytics",
+        "description": "Get deep insights into your business with customizable reports, charts, and KPI tracking that help you grow faster.",
+        "icon": "bar-chart"
+      },
+      {
+        "id": "secure-cloud",
+        "title": "Enterprise-Grade Security",
+        "description": "Your data is protected with end-to-end encryption, regular backups, and compliance with international security standards.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "pricing": {
+    "section": {
+      "badge": "Pricing",
+      "title": "Choose Your Perfect Plan",
+      "subtitle": "Transparent pricing that grows with your business"
+    },
+    "toggle": {
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "save": "Save 20%"
+    },
+    "plans": [
+      {
+        "id": "starter",
+        "name": "Starter",
+        "description": "Perfect for individuals and small teams just getting started",
+        "price": {
+          "monthly": 0,
+          "annually": 0
+        },
+        "features": [
+          "Up to 3 users",
+          "Mobile app access",
+          "Basic web dashboard",
+          "5GB storage",
+          "Email support",
+          "Basic analytics"
+        ],
+        "cta": "Start Free",
+        "popular": false
+      },
+      {
+        "id": "professional",
+        "name": "Professional",
+        "description": "For growing businesses that need more power and flexibility",
+        "price": {
+          "monthly": 29,
+          "annually": 279
+        },
+        "features": [
+          "Up to 15 users",
+          "Full mobile & web access",
+          "Advanced dashboard",
+          "50GB storage",
+          "Priority support",
+          "Advanced analytics",
+          "Custom reports",
+          "API access",
+          "Team collaboration tools"
+        ],
+        "cta": "Start Trial",
+        "popular": true
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise",
+        "description": "Custom solutions for large organizations with specific needs",
+        "price": {
+          "monthly": "Custom",
+          "annually": "Custom"
+        },
+        "features": [
+          "Unlimited users",
+          "All Professional features",
+          "Unlimited storage",
+          "24/7 dedicated support",
+          "Custom integrations",
+          "Advanced security features",
+          "SLA guarantee",
+          "Onboarding & training",
+          "Custom development"
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ],
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can I change my plan later?",
+          "answer": "Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the charges."
+        },
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for Enterprise plans."
+        },
+        {
+          "question": "Is there a free trial?",
+          "answer": "Yes! Our Professional plan comes with a 14-day free trial. No credit card required to start."
+        },
+        {
+          "question": "What happens to my data if I cancel?",
+          "answer": "You can export all your data at any time. After cancellation, we keep your data for 30 days before permanent deletion."
+        }
+      ]
+    }
+  },
+  "blog": {
+    "section": {
+      "badge": "Blog & Resources",
+      "title": "Latest Insights",
+      "subtitle": "Stay updated with tips, tutorials, and industry news"
+    },
+    "readMore": "Read More",
+    "readTime": "min read",
+    "categories": {
+      "all": "All",
+      "tutorials": "Tutorials",
+      "updates": "Product Updates",
+      "tips": "Tips & Tricks",
+      "news": "News"
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "About Us",
+      "title": "Building the Future of Business Management",
+      "subtitle": "We're on a mission to empower businesses with intuitive, powerful tools that drive growth and efficiency."
+    },
+    "story": {
+      "title": "Our Story",
+      "content": "Founded in 2024, Sostentia Desk was born from a simple observation: businesses needed a unified platform that works seamlessly across mobile and web. We've built a solution that combines the convenience of mobile access with the power of comprehensive web analytics."
+    },
+    "values": {
+      "title": "Our Values",
+      "items": [
+        {
+          "title": "Innovation",
+          "description": "We continuously push boundaries to deliver cutting-edge solutions.",
+          "icon": "lightbulb"
+        },
+        {
+          "title": "Simplicity",
+          "description": "Complex problems deserve elegant, simple solutions.",
+          "icon": "zap"
+        },
+        {
+          "title": "Security",
+          "description": "Your data security is our top priority, always.",
+          "icon": "shield"
+        },
+        {
+          "title": "Support",
+          "description": "We're here to help you succeed, every step of the way.",
+          "icon": "heart"
+        }
+      ]
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Passionate professionals dedicated to your success"
+    }
+  },
+  "support": {
+    "hero": {
+      "badge": "Support",
+      "title": "We're Here to Help",
+      "subtitle": "Get the support you need, when you need it"
+    },
+    "options": {
+      "title": "Get In Touch",
+      "items": [
+        {
+          "title": "Email Support",
+          "description": "Get help via email within 24 hours",
+          "contact": "support@sostenatiadesk.com",
+          "icon": "mail"
+        },
+        {
+          "title": "Live Chat",
+          "description": "Chat with our team in real-time",
+          "contact": "Available 9 AM - 6 PM EST",
+          "icon": "message-circle"
+        },
+        {
+          "title": "Documentation",
+          "description": "Browse our comprehensive guides",
+          "contact": "Visit Help Center",
+          "icon": "book"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "categories": {
+        "general": "General",
+        "account": "Account",
+        "billing": "Billing",
+        "technical": "Technical"
+      }
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again."
+    }
+  },
+  "register": {
+    "title": "Create Your Account",
+    "subtitle": "Start your 14-day free trial today. No credit card required.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "phone": "Phone Number (Optional)",
+      "useCase": "How will you use Sostentia Desk?",
+      "useCaseOptions": {
+        "projectManagement": "Project Management",
+        "customerService": "Customer Service",
+        "sales": "Sales & CRM",
+        "operations": "Operations",
+        "other": "Other"
+      },
+      "terms": "I agree to the Terms of Service and Privacy Policy",
+      "submit": "Create Account",
+      "submitting": "Creating Account...",
+      "success": "Account created successfully!",
+      "error": "Failed to create account. Please try again.",
+      "haveAccount": "Already have an account?",
+      "login": "Sign In"
+    },
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "passwordMin": "Password must be at least 8 characters",
+      "passwordMatch": "Passwords do not match",
+      "terms": "You must accept the terms and conditions"
+    }
+  },
+  "footer": {
+    "tagline": "Empowering businesses with seamless mobile and web solutions.",
+    "product": {
+      "title": "Product",
+      "links": {
+        "features": "Features",
+        "pricing": "Pricing",
+        "security": "Security",
+        "roadmap": "Roadmap",
+        "changelog": "Changelog"
+      }
+    },
+    "company": {
+      "title": "Company",
+      "links": {
+        "about": "About Us",
+        "careers": "Careers",
+        "blog": "Blog",
+        "press": "Press Kit",
+        "contact": "Contact"
+      }
+    },
+    "resources": {
+      "title": "Resources",
+      "links": {
+        "documentation": "Documentation",
+        "api": "API Reference",
+        "support": "Support",
+        "community": "Community",
+        "status": "Status"
+      }
+    },
+    "legal": {
+      "title": "Legal",
+      "links": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "cookies": "Cookie Policy",
+        "licenses": "Licenses"
+      }
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Get the latest updates, tips, and insights delivered to your inbox.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe",
+      "success": "Thanks for subscribing!",
+      "error": "Please enter a valid email"
+    },
+    "social": {
+      "title": "Follow Us"
+    },
+    "copyright": "© 2026 Sostentia Desk. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try Again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search...",
+    "filter": "Filter",
+    "sort": "Sort",
+    "noResults": "No results found",
+    "viewAll": "View All",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "backToHome": "Back to Home"
+  }
+}
