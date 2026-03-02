@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
@@ -24,7 +25,7 @@ export function Hero({ locale }: HeroProps) {
       <GradientBlob color="green" size="md" className="top-1/2 right-1/4" delay={4} />
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -108,20 +109,15 @@ export function Hero({ locale }: HeroProps) {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
+            className="relative pb-16"
           >
-            <div className="relative glass-strong rounded-3xl p-4 shadow-2xl">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-green-500/20 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-primary/20 flex items-center justify-center">
-                    <span className="text-5xl font-bold bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
-                      S
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Product Screenshot Here
-                  </p>
-                </div>
+            <div className="rounded-3xl shadow-2xl overflow-visible border border-white/10 p-6 bg-gradient-to-br from-white/5 to-transparent">
+              <div className="relative rounded-2xl overflow-hidden">
+                <img
+                  src="/images/screenshots/Screenshot1.png"
+                  alt="Sostentia Desk Dashboard"
+                  className="w-full h-auto block"
+                />
               </div>
 
               {/* Floating Elements */}
@@ -134,7 +130,7 @@ export function Hero({ locale }: HeroProps) {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="absolute -top-6 -right-6 glass rounded-2xl p-4 shadow-xl"
+                className="absolute -top-12 -right-8 glass rounded-2xl p-4 shadow-xl z-10"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
@@ -152,7 +148,7 @@ export function Hero({ locale }: HeroProps) {
                   ease: 'easeInOut',
                   delay: 1,
                 }}
-                className="absolute -bottom-6 -left-6 glass rounded-2xl p-4 shadow-xl"
+                className="absolute -bottom-16 -left-8 glass rounded-2xl p-4 shadow-xl z-10"
               >
                 <div className="flex items-center gap-2">
                   <Star className="h-4 w-4 text-primary fill-primary" />
