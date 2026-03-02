@@ -9,7 +9,7 @@ export default async function RegisterPage({
   const { locale } = await params;
 
   return (
-    <section className="py-24">
+    <section className="pt-40 pb-24">
       <Container size="lg">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Create Your Account</h1>
