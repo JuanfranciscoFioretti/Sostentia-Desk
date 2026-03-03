@@ -43,6 +43,12 @@
         "icon": "monitor"
       },
       {
+        "id": "loyalty-program",
+        "title": "Programa de Lealtad",
+        "description": "Recompensa a tus clientes con puntos, descuentos y beneficios exclusivos. Construye relaciones duraderas e incrementa el valor de vida útil del cliente.",
+        "icon": "gift"
+      },
+      {
         "id": "real-time-sync",
         "title": "Sincronización en Tiempo Real",
         "description": "Todos tus datos se sincronizan instantáneamente entre las plataformas móvil y web. Trabaja sin problemas desde cualquier dispositivo sin perder el ritmo.",
@@ -61,10 +67,10 @@
         "icon": "bar-chart"
       },
       {
-        "id": "secure-cloud",
-        "title": "Seguridad de Nivel Empresarial",
-        "description": "Tus datos están protegidos con encriptación de extremo a extremo, copias de seguridad regulares y cumplimiento con estándares de seguridad internacionales.",
-        "icon": "shield"
+        "id": "real-time-chat",
+        "title": "Chat en Tiempo Real",
+        "description": "Chat integrado en tiempo real para comunicarte directamente con tus clientes. Proporciona soporte instantáneo y construye relaciones más fuertes.",
+        "icon": "message-circle"
       }
     ]
   },

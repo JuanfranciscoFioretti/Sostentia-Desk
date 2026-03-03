@@ -2,9 +2,11 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield } from 'lucide-react';
+import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield, Gift, MessageCircle } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
+import { MobileFrame } from '@/components/ui/MobileFrame';
+import Image from 'next/image';
 
 const iconMap = {
   smartphone: Smartphone,
@@ -13,6 +15,8 @@ const iconMap = {
   users: Users,
   'bar-chart': BarChart,
   shield: Shield,
+  gift: Gift,
+  'message-circle': MessageCircle,
 };
 
 export function FeaturesList() {
@@ -57,7 +61,7 @@ export function FeaturesList() {
                     {feature.description}
                   </p>
                   <ul className="space-y-3">
-                    {['Fast performance', 'Easy to use', 'Reliable & secure'].map(
+                    {(index === 2 ? ['Earn Points', 'Unlock Benefits', 'Happy Customers'] : ['Fast performance', 'Easy to use', 'Reliable & secure']).map(
                       (item, i) => (
                         <li key={i} className="flex items-center gap-3">
                           <div className="w-2 h-2 rounded-full bg-primary" />
@@ -68,16 +72,116 @@ export function FeaturesList() {
                   </ul>
                 </div>
 
-                {/* Image Placeholder */}
+                {/* Image or MobileFrame for first feature */}
                 <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
-                  <div className="relative glass-strong rounded-3xl p-8 aspect-square flex items-center justify-center">
-                    <div className="text-center">
-                      {Icon && <Icon className="h-32 w-32 mx-auto mb-4 text-primary/30" />}
-                      <p className="text-sm text-muted-foreground">
-                        Feature visualization here
-                      </p>
+                  {index === 0 ? (
+                    <div className="flex items-center justify-center">
+                      <MobileFrame>
+                        <div className="relative w-[220px] h-[480px]">
+                          <Image
+                            src="/images/screenshots/App-Screen-1.webp"
+                            alt="App screenshot"
+                            fill
+                            className="object-cover rounded-2xl"
+                            priority
+                          />
+                        </div>
+                      </MobileFrame>
                     </div>
-                  </div>
+                  ) : index === 1 ? (
+                    <div className="flex items-center justify-center">
+                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                        <Image
+                          src="/images/screenshots/Screenshot1.webp"
+                          alt="Web dashboard screenshot"
+                          width={900}
+                          height={500}
+                          className="object-cover w-full h-full"
+                          style={{ display: 'block' }}
+                          priority
+                        />
+                      </div>
+                    </div>
+                  ) : index === 2 ? (
+                    <div className="flex items-center justify-center">
+                      <MobileFrame>
+                        <div className="relative w-[220px] h-[480px]">
+                          <Image
+                            src="/images/screenshots/App-Screen-2-Dark.webp"
+                            alt="Loyalty Program screenshot"
+                            fill
+                            className="object-cover rounded-2xl"
+                            priority
+                          />
+                        </div>
+                      </MobileFrame>
+                    </div>
+                  ) : index === 3 ? (
+                    <div className="flex items-center justify-center">
+                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                        <Image
+                          src="/images/screenshots/Orders-Screen.webp"
+                          alt="Orders screen screenshot"
+                          width={900}
+                          height={500}
+                          className="object-cover w-full h-full"
+                          style={{ display: 'block' }}
+                          priority
+                        />
+                      </div>
+                    </div>
+                  ) : index === 4 ? (
+                    <div className="flex items-center justify-center">
+                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                        <Image
+                          src="/images/screenshots/Users-Screen.webp"
+                          alt="Users screen screenshot"
+                          width={900}
+                          height={500}
+                          className="object-cover w-full h-full"
+                          style={{ display: 'block' }}
+                          priority
+                        />
+                      </div>
+                    </div>
+                  ) : index === 5 ? (
+                    <div className="flex items-center justify-center">
+                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                        <Image
+                          src="/images/screenshots/Stats-Screen.webp"
+                          alt="Stats screen screenshot"
+                          width={900}
+                          height={500}
+                          className="object-cover w-full h-full"
+                          style={{ display: 'block' }}
+                          priority
+                        />
+                      </div>
+                    </div>
+                  ) : index === 6 ? (
+                    <div className="flex items-center justify-center">
+                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                        <Image
+                          src="/images/screenshots/Real-Time-Chat.webp"
+                          alt="Real-time chat screenshot"
+                          width={900}
+                          height={500}
+                          className="object-cover w-full h-full"
+                          style={{ display: 'block' }}
+                          priority
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="relative glass-strong rounded-3xl p-8 aspect-square flex items-center justify-center">
+                      <div className="text-center">
+                        {Icon && <Icon className="h-32 w-32 mx-auto mb-4 text-primary/30" />}
+                        <p className="text-sm text-muted-foreground">
+                          Feature visualization here
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -9,6 +10,8 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { SpaceBackground } from '@/components/ui/SpaceBackground';
 import { GradientBlob } from '@/components/ui/GradientBlob';
+import { Modal } from '@/components/ui/Modal';
+import { VideoPlayer } from '@/components/ui/VideoPlayer';
 
 interface HeroProps {
   locale: string;
@@ -16,6 +19,7 @@ interface HeroProps {
 
 export function Hero({ locale }: HeroProps) {
   const t = useTranslations('hero');
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -76,6 +80,7 @@ export function Hero({ locale }: HeroProps) {
                 variant="secondary"
                 size="lg"
                 className="group"
+                onClick={() => setIsVideoOpen(true)}
               >
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 {t('cta.secondary')}
@@ -109,12 +114,12 @@ export function Hero({ locale }: HeroProps) {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative pb-16"
+            className="relative pb-2"
           >
-            <div className="rounded-3xl shadow-2xl overflow-visible border border-white/10 p-6 bg-gradient-to-br from-white/5 to-transparent">
+            <div className="rounded-3xl shadow-2xl overflow-visible border border-white/10 p-6 -mb-12 bg-gradient-to-br from-white/5 to-transparent">
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src="/images/screenshots/Screenshot1.png"
+                  src="/images/screenshots/Screenshot1.webp"
                   alt="Sostentia Desk Dashboard"
                   className="w-full h-auto block"
                 />
@@ -130,7 +135,7 @@ export function Hero({ locale }: HeroProps) {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="absolute -top-12 -right-8 glass rounded-2xl p-4 shadow-xl z-10"
+                className="absolute top-4 -right-8 glass rounded-2xl p-4 shadow-xl z-10"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
@@ -148,7 +153,7 @@ export function Hero({ locale }: HeroProps) {
                   ease: 'easeInOut',
                   delay: 1,
                 }}
-                className="absolute -bottom-16 -left-8 glass rounded-2xl p-4 shadow-xl z-10"
+                className="absolute -bottom-4 -left-4 glass rounded-2xl p-4 shadow-xl z-10"
               >
                 <div className="flex items-center gap-2">
                   <Star className="h-4 w-4 text-primary fill-primary" />
@@ -159,6 +164,14 @@ export function Hero({ locale }: HeroProps) {
           </motion.div>
         </div>
       </Container>
+
+      <Modal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)}>
+        <VideoPlayer
+          url="/videos/demo.mp4"
+          controls={true}
+          autoplay={true}
+        />
+      </Modal>
     </section>
   );
 }

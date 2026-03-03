@@ -43,6 +43,12 @@
         "icon": "monitor"
       },
       {
+        "id": "loyalty-program",
+        "title": "Loyalty Program",
+        "description": "Reward your customers with points, discounts, and exclusive benefits. Build lasting relationships and increase customer lifetime value.",
+        "icon": "gift"
+      },
+      {
         "id": "real-time-sync",
         "title": "Real-Time Synchronization",
         "description": "All your data syncs instantly across mobile and web platforms. Work seamlessly from any device without missing a beat.",
@@ -61,10 +67,10 @@
         "icon": "bar-chart"
       },
       {
-        "id": "secure-cloud",
-        "title": "Enterprise-Grade Security",
-        "description": "Your data is protected with end-to-end encryption, regular backups, and compliance with international security standards.",
-        "icon": "shield"
+        "id": "real-time-chat",
+        "title": "Real Time Chat Support",
+        "description": "Integrated real-time chat to communicate directly with your customers. Provide instant support and build stronger relationships.",
+        "icon": "message-circle"
       }
     ]
   },
