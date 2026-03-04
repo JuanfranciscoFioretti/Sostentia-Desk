@@ -1,14 +1,22 @@
 import nodemailer from 'nodemailer';
 
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_PORT === '465',
-  auth: {
-    user: process.env.SMTP_EMAIL,
-    pass: process.env.SMTP_PASSWORD,
-  },
-});
+let transporter: ReturnType<typeof nodemailer.createTransport> | null = null;
+
+function getTransporter() {
+  if (transporter) return transporter;
+
+  transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST || 'localhost',
+    port: parseInt(process.env.SMTP_PORT || '587'),
+    secure: process.env.SMTP_PORT === '465',
+    auth: {
+      user: process.env.SMTP_EMAIL || '',
+      pass: process.env.SMTP_PASSWORD || '',
+    },
+  });
+
+  return transporter;
+}
 
 export async function sendSupportEmail(
   name: string,
@@ -26,7 +34,7 @@ export async function sendSupportEmail(
     };
 
     // Email to the support team
-    await transporter.sendMail({
+    await getTransporter().sendMail({
       from: `Sostentia Desk <${process.env.SMTP_EMAIL}>`,
       to: 'sostentia@gmail.com',
       subject: `New Support Inquiry: ${subject}`,
@@ -154,7 +162,7 @@ export async function sendSupportEmail(
     });
 
     // Confirmation email to the user
-    await transporter.sendMail({
+    await getTransporter().sendMail({
       from: `Sostentia Desk <${process.env.SMTP_EMAIL}>`,
       to: email,
       subject: `We received your message: ${subject}`,

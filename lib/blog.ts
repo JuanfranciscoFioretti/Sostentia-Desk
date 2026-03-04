@@ -2,7 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const postsDirectory = path.join(process.cwd(), 'content/blog');
+let postsDirectory: string | null = null;
+
+function getPostsDirectory(): string {
+  if (postsDirectory) return postsDirectory;
+  postsDirectory = path.join(process.cwd(), 'content/blog');
+  return postsDirectory;
+}
 
 export interface BlogPost {
   slug: string;
@@ -17,7 +23,7 @@ export interface BlogPost {
 
 export function getPostBySlug(slug: string, locale: string): BlogPost | null {
   try {
-    const fullPath = path.join(postsDirectory, locale, `${slug}.mdx`);
+    const fullPath = path.join(getPostsDirectory(), locale, `${slug}.mdx`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
@@ -38,7 +44,7 @@ export function getPostBySlug(slug: string, locale: string): BlogPost | null {
 
 export function getAllPosts(locale: string): BlogPost[] {
   try {
-    const localeDir = path.join(postsDirectory, locale);
+    const localeDir = path.join(getPostsDirectory(), locale);
     
     if (!fs.existsSync(localeDir)) {
       return [];
