@@ -78,8 +78,14 @@
   .glass {
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    background-color: rgba(240, 240, 245, 0.6);
     position: relative;
+  }
+
+  .dark .glass {
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .glass::before {

@@ -72,25 +72,26 @@ export function Header({ locale }: HeaderProps) {
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
             <LanguageSelector />
-            <Button
+            {/* <Button
               variant="ghost"
               size="sm"
               asChild
             >
               <Link href={`/${locale}/login`}>{t('login')}</Link>
-            </Button>
+            </Button> */}
             <Button
               variant="primary"
               size="sm"
               asChild
             >
-              <Link href={`/${locale}/register`}>{t('getStarted')}</Link>
+              <Link href={`/${locale}/support`}>{t('getStarted')}</Link>
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            suppressHydrationWarning
             className="md:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
             aria-label="Toggle menu"
           >
@@ -121,21 +122,21 @@ export function Header({ locale }: HeaderProps) {
             <LanguageSelector />
           </div>
           <div className="flex flex-col gap-2 px-4 pt-2">
-            <Button
+            {/* <Button
               variant="ghost"
               size="md"
               className="w-full"
               asChild
             >
               <Link href={`/${locale}/login`}>{t('login')}</Link>
-            </Button>
+            </Button> */}
             <Button
               variant="primary"
               size="md"
               className="w-full"
               asChild
             >
-              <Link href={`/${locale}/register`}>{t('getStarted')}</Link>
+              <Link href={`/${locale}/support`}>{t('getStarted')}</Link>
             </Button>
           </div>
         </div>

@@ -33,42 +33,43 @@ export function PricingCards({ locale }: PricingCardsProps) {
     <Section className="pt-20">
       <Container>
         {/* Pricing Toggle */}
-        <div className="flex items-center justify-center gap-4 mb-16">
-          <span
-            className={`text-sm font-medium transition-colors ${
-              !isAnnual ? 'text-foreground' : 'text-muted-foreground'
-            }`}
-          >
-            {t('toggle.monthly')}
-          </span>
-          <button
-            onClick={() => setIsAnnual(!isAnnual)}
-            className="relative w-14 h-7 rounded-full glass transition-colors"
-            aria-label="Toggle pricing"
-          >
-            <motion.div
-              className="absolute top-1 left-1 w-5 h-5 rounded-full bg-primary"
-              animate={{
-                x: isAnnual ? 28 : 0,
-              }}
-              transition={{
-                type: 'spring',
-                stiffness: 500,
-                damping: 30,
-              }}
-            />
-          </button>
-          <span
-            className={`text-sm font-medium transition-colors ${
-              isAnnual ? 'text-foreground' : 'text-muted-foreground'
-            }`}
-          >
-            {t('toggle.annually')}
-          </span>
+        <div className="flex flex-col items-center justify-center gap-6 mb-16">
+          <div className="flex items-center justify-center gap-0 bg-muted rounded-2xl p-1.5 border-2 border-muted-foreground/30">
+            <button
+              onClick={() => setIsAnnual(false)}
+              className={`px-8 py-3 rounded-xl font-semibold transition-all duration-200 cursor-pointer ${
+                !isAnnual
+                  ? 'glass text-foreground shadow-lg hover:shadow-xl'
+                  : 'text-foreground/60 hover:text-foreground bg-muted/60 hover:bg-muted/40'
+              }`}
+              aria-pressed={!isAnnual}
+              aria-label="Select monthly pricing"
+            >
+              {t('toggle.monthly')}
+            </button>
+            <button
+              onClick={() => setIsAnnual(true)}
+              className={`px-8 py-3 rounded-xl font-semibold transition-all duration-200 cursor-pointer ${
+                isAnnual
+                  ? 'glass text-foreground shadow-lg hover:shadow-xl'
+                  : 'text-foreground/60 hover:text-foreground bg-muted/60 hover:bg-muted/40'
+              }`}
+              aria-pressed={isAnnual}
+              aria-label="Select annual pricing"
+            >
+              {t('toggle.annually')}
+            </button>
+          </div>
           {isAnnual && (
-            <Badge variant="success" className="ml-2">
-              {t('toggle.save')}
-            </Badge>
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Badge variant="success" className="px-4 py-1.5">
+                {t('toggle.save')}
+              </Badge>
+            </motion.div>
           )}
         </div>
 
@@ -90,7 +91,7 @@ export function PricingCards({ locale }: PricingCardsProps) {
                 hover={false}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2">
                     <Badge variant="primary" className="px-4 py-1.5">
                       Most Popular
                     </Badge>
@@ -139,16 +140,10 @@ export function PricingCards({ locale }: PricingCardsProps) {
                 <Button
                   variant={plan.popular ? 'primary' : 'secondary'}
                   size="lg"
-                  className="w-full"
+                  className={`w-full ${plan.popular ? 'border-2 border-primary' : ''}`}
                   asChild
                 >
-                  <Link
-                    href={
-                      plan.id === 'enterprise'
-                        ? `/${locale}/support`
-                        : `/${locale}/register`
-                    }
-                  >
+                  <Link href={`/${locale}/support`}>
                     {plan.cta}
                   </Link>
                 </Button>

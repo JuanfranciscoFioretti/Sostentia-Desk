@@ -14,7 +14,7 @@
     "titleHighlight": "Sostentia Desk",
     "subtitle": "La plataforma todo-en-uno que combina una potente aplicación móvil y un panel web completo para optimizar las operaciones de tu negocio.",
     "cta": {
-      "primary": "Prueba Gratis",
+      "primary": "Comenzar Ahora",
       "secondary": "Ver Demo"
     },
     "stats": {
@@ -35,116 +35,148 @@
         "title": "Aplicación Móvil Nativa",
         "description": "Construida con React Native para una experiencia perfecta en iOS y Android. Accede a los datos de tu negocio en cualquier momento y lugar con nuestra aplicación móvil ultrarrápida.",
         "icon": "smartphone"
+          ,"items": ["iOS y Android", "Acceso sin conexión", "Reservas en la app"]
       },
       {
         "id": "web-dashboard",
         "title": "Panel Web Completo",
         "description": "Dashboard completo en React con analíticas en tiempo real, informes avanzados y visualización intuitiva de datos para tomar decisiones informadas.",
         "icon": "monitor"
+          ,"items": ["Datos en tiempo real", "Creación de productos y eventos", "Gestión de pedidos"]
       },
       {
         "id": "loyalty-program",
         "title": "Programa de Lealtad",
         "description": "Recompensa a tus clientes con puntos, descuentos y beneficios exclusivos. Construye relaciones duraderas e incrementa el valor de vida útil del cliente.",
         "icon": "gift"
+          ,"items": ["Gana puntos", "Desbloquea beneficios", "Mayor engagement"]
       },
       {
         "id": "real-time-sync",
         "title": "Sincronización en Tiempo Real",
         "description": "Todos tus datos se sincronizan instantáneamente entre las plataformas móvil y web. Trabaja sin problemas desde cualquier dispositivo sin perder el ritmo.",
         "icon": "refresh-cw"
+          ,"items": ["Actualizaciones instantáneas", "Cero latencia", "Sincronización multi-dispositivo"]
       },
       {
         "id": "team-collaboration",
         "title": "Colaboración en Equipo",
         "description": "Invita miembros del equipo, asigna roles y colabora eficientemente con herramientas de comunicación integradas y gestión de permisos.",
         "icon": "users"
+          ,"items": ["Crear miembros", "Asignar roles", "Acceso limitado"]
       },
       {
         "id": "advanced-analytics",
         "title": "Analíticas Avanzadas",
         "description": "Obtén información profunda sobre tu negocio con informes personalizables, gráficos y seguimiento de KPI que te ayudan a crecer más rápido.",
         "icon": "bar-chart"
+          ,"items": ["Analíticas en tiempo real", "Seguimiento de KPIs", "Insights de datos"]
       },
       {
         "id": "real-time-chat",
         "title": "Chat en Tiempo Real",
         "description": "Chat integrado en tiempo real para comunicarte directamente con tus clientes. Proporciona soporte instantáneo y construye relaciones más fuertes.",
         "icon": "message-circle"
+          ,"items": ["Respuesta instantánea", "Soporte 24/7", "Satisfacción del cliente"]
       }
     ]
   },
   "pricing": {
+    "infrastructure": {
+      "title": "Cobertura de Infraestructura y Costos Por Cliente",
+      "description": "Cada cliente recibe una implementación aislada que incluye:",
+      "features": [
+        "Backend dedicado AWS ECS/Fargate (24/7)",
+        "Instancia de Panel web dedicada",
+        "Clúster de base de datos MongoDB Atlas",
+        "CDN CloudFront",
+        "Monitoreo CloudWatch",
+        "Integración Stripe Connect",
+        "Publicación en App Store (Google Play + Programa de Desarrollador de Apple)"
+      ]
+    },
     "section": {
       "badge": "Precios",
       "title": "Elige Tu Plan Perfecto",
-      "subtitle": "Precios transparentes que crecen con tu negocio"
+      "subtitle": "Precios escalables que crecen con tu negocio"
     },
     "toggle": {
       "monthly": "Mensual",
       "annually": "Anual",
-      "save": "Ahorra 20%"
+      "save": "2 meses gratis"
     },
     "plans": [
       {
         "id": "starter",
-        "name": "Inicial",
-        "description": "Perfecto para individuos y equipos pequeños que están empezando",
+        "name": "Iniciador",
+        "description": "Ideal para restaurantes pequeños",
         "price": {
-          "monthly": 0,
-          "annually": 0
+          "monthly": 297,
+          "annually": 2970
         },
+        "commission": "10%",
+        "infrastructure": "~$90/mes",
+        "locations": "1 ubicación",
+        "performance": "Clúster de rendimiento estándar",
+        "featurePrice": "$15/mes por característica nueva",
+        "launchFee": "$490 único",
         "features": [
-          "Hasta 3 usuarios",
-          "Acceso a aplicación móvil",
-          "Panel web básico",
-          "5GB de almacenamiento",
-          "Soporte por email",
-          "Analíticas básicas"
+          "App iOS + Android personalizada",
+          "Dashboard administrativo web",
+          "Hosting seguro en la nube incluido",
+          "Setup: $299 (pago único)",
+          "Comisión: 10% por transacción online",
+          "Nuevas features: +$15 / mes por cada feature agregada"
         ],
-        "cta": "Comenzar Gratis",
+        "cta": "Comenzar",
         "popular": false
       },
       {
-        "id": "professional",
-        "name": "Profesional",
-        "description": "Para negocios en crecimiento que necesitan más potencia y flexibilidad",
+        "id": "growth",
+        "name": "Crecimiento",
+        "description": "Diseñado para restaurantes en crecimiento",
         "price": {
-          "monthly": 29,
-          "annually": 279
+          "monthly": 597,
+          "annually": 5970
         },
+        "commission": "7%",
+        "infrastructure": "~$200/mes",
+        "locations": "Múltiples ubicaciones",
+        "performance": "Infraestructura de rendimiento mejorado",
+        "featurePrice": "$5/mes por característica nueva",
+        "launchFee": "$890 único",
         "features": [
-          "Hasta 15 usuarios",
-          "Acceso completo móvil y web",
-          "Panel avanzado",
-          "50GB de almacenamiento",
-          "Soporte prioritario",
-          "Analíticas avanzadas",
-          "Informes personalizados",
-          "Acceso API",
-          "Herramientas de colaboración"
+          "Todo lo incluido en Iniciador",
+          "Infraestructura optimizada para mayor tráfico",
+          "Reportes y herramientas promocionales avanzadas",
+          "Setup: $600 (pago único)",
+          "Comisión: 7% por transacción online",
+          "Nuevas features: +$5 / mes por cada feature agregada"
         ],
         "cta": "Iniciar Prueba",
         "popular": true
       },
       {
         "id": "enterprise",
-        "name": "Empresarial",
-        "description": "Soluciones personalizadas para grandes organizaciones con necesidades específicas",
+        "name": "Empresarial Pro",
+        "description": "Diseñado para cadenas y marcas de alto volumen",
         "price": {
-          "monthly": "Personalizado",
-          "annually": "Personalizado"
+          "monthly": 1290,
+          "annually": 12900
         },
+        "commission": "3%",
+        "infrastructure": "~$422/mes",
+        "locations": "Soporte multi-ubicación",
+        "performance": "Infraestructura premium multi-AZ",
+        "featurePrice": "Incluido",
+        "launchFee": "$1,500 único",
         "features": [
-          "Usuarios ilimitados",
-          "Todas las funciones Profesional",
-          "Almacenamiento ilimitado",
-          "Soporte dedicado 24/7",
-          "Integraciones personalizadas",
-          "Funciones de seguridad avanzadas",
-          "Garantía SLA",
-          "Incorporación y capacitación",
-          "Desarrollo personalizado"
+          "Todo lo incluido en Profesional",
+          "Infraestructura dedicada y auto-escalable",
+          "Soporte prioritario 24/7",
+          "Setup: $1,200 (pago único)",
+          "Comisión: 3% por transacción online",
+          "Nuevas features: Incluidas sin coste adicional"
         ],
         "cta": "Contactar Ventas",
         "popular": false
@@ -154,20 +186,20 @@
       "title": "Preguntas Frecuentes",
       "items": [
         {
-          "question": "¿Puedo cambiar mi plan más tarde?",
-          "answer": "¡Sí! Puedes mejorar o reducir tu plan en cualquier momento. Los cambios tienen efecto inmediato y prorrateamos los cargos."
+          "question": "¿Qué significa 'cobertura de costos de infraestructura'?",
+          "answer": "Invertimos en infraestructura en la nube dedicada para tu negocio. Estos montos representan nuestros costos de infraestructura cubiertos por nosotros - tú disfrutas de recursos AWS de nivel empresarial sin tener que gestionarlos."
         },
         {
-          "question": "¿Qué métodos de pago aceptan?",
-          "answer": "Aceptamos todas las tarjetas de crédito principales (Visa, MasterCard, American Express), PayPal y transferencias bancarias para planes Empresariales."
+          "question": "¿Qué es la comisión?",
+          "answer": "Dependiendo de tu plan, tomamos un pequeño porcentaje de tus transacciones totales procesadas. Esto nos permite alinear nuestro éxito con el tuyo."
         },
         {
-          "question": "¿Hay una prueba gratuita?",
-          "answer": "¡Sí! Nuestro plan Profesional incluye una prueba gratuita de 14 días. No se requiere tarjeta de crédito para comenzar."
+          "question": "¿Puedo mejora o reducir mi plan en cualquier momento?",
+          "answer": "¡Sí! Puedes cambiar tu plan en cualquier momento. Los cambios tienen efecto inmediato y ajustaremos los cargos proporcionalmente."
         },
         {
-          "question": "¿Qué pasa con mis datos si cancelo?",
-          "answer": "Puedes exportar todos tus datos en cualquier momento. Después de la cancelación, mantenemos tus datos durante 30 días antes de la eliminación permanente."
+          "question": "¿Las características nuevas siempre tienen cargo?",
+          "answer": "La mayoría de las características nuevas están incluidas en el plan Empresarial. Los planes Básico y Profesional cobran una tarifa mensual recurrente por características adicionales desarrolladas para tus necesidades."
         }
       ]
     }
@@ -188,6 +220,12 @@
       "news": "Noticias"
     }
   },
+    "ctaSection": {
+      "title": "¿Listo para transformar tu negocio?",
+      "description": "Únete a miles de empresas que ya usan Sostentia Desk para optimizar sus operaciones y aumentar la productividad.",
+      "getStarted": "Comenzar",
+      "learnMore": "Saber más"
+    },
   "about": {
     "hero": {
       "badge": "Nosotros",
@@ -196,7 +234,7 @@
     },
     "story": {
       "title": "Nuestra Historia",
-      "content": "Fundada en 2024, Sostentia Desk nació de una simple observación: las empresas necesitaban una plataforma unificada que funcionara perfectamente entre móvil y web. Hemos construido una solución que combina la conveniencia del acceso móvil con el poder de las analíticas web completas."
+      "content": "Creemos que los grandes negocios merecen mejores herramientas. Sostentia nació de una observación simple pero poderosa: los equipos perdían incontables horas navegando entre plataformas fragmentadas, lidiando con datos desincronizados y manejando operaciones en sistemas desconectados.\n\nAsí que construimos diferente. Creamos una plataforma unificada que trae todo junto—aplicación móvil, dashboard web, analíticas en tiempo real e insights de clientes—todo sincronizado y accesible desde cualquier lugar. Nuestra misión es darle a cada negocio, sin importar su tamaño, herramientas de clase empresarial que hagan simple la complejidad.\n\nPero la tecnología no es suficiente. Creemos en relaciones genuinas. Por eso nos comprometemos con soporte de persona a persona, asegurando que nunca serás solo un número de ticket. Nosotros tenemos éxito cuando tú tienes éxito, y estamos aquí para apoyarte en cada paso de tu crecimiento.\n\nDesde 2024, hemos estado obsesionados con una sola cosa: eliminar la fricción entre tú y tus datos, entre tu equipo y sus objetivos. Porque cuando tu equipo tiene las herramientas correctas y el soporte correcto, no hay nada que no puedas lograr."
     },
     "values": {
       "title": "Nuestros Valores",
@@ -270,8 +308,16 @@
       "title": "Envíanos un Mensaje",
       "name": "Nombre Completo",
       "email": "Correo Electrónico",
+      "phone": "Número de Teléfono",
       "subject": "Asunto",
       "message": "Tu Mensaje",
+      "plan": "Plan Interesado",
+      "planOptions": {
+        "none": "Aún no estoy seguro",
+        "starter": "Iniciador - $497/mes",
+        "growth": "Crecimiento - $597/mes",
+        "enterprise": "Empresarial Pro - $1,290/mes"
+      },
       "submit": "Enviar Mensaje",
       "success": "¡Mensaje enviado con éxito! Te responderemos pronto.",
       "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."

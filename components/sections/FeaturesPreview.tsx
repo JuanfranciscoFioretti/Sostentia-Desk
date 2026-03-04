@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield } from 'lucide-react';
+import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield, Gift } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
@@ -15,16 +15,19 @@ const iconMap = {
   users: Users,
   'bar-chart': BarChart,
   shield: Shield,
+  gift: Gift,
 };
 
 export function FeaturesPreview() {
   const t = useTranslations('features');
-  const features = t.raw('list') as Array<{
+  let features = t.raw('list') as Array<{
     id: string;
     title: string;
     description: string;
     icon: string;
   }>;
+  // Remove Real Time Chat Support only for home
+  features = features.filter(f => f.id !== 'real-time-chat');
 
   return (
     <Section background="muted" className="pt-20">

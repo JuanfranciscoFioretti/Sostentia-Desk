@@ -21,6 +21,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      suppressHydrationWarning
       className="relative h-9 w-9 rounded-lg glass hover:bg-primary/10 transition-all duration-300 flex items-center justify-center group"
       aria-label="Toggle theme"
     >

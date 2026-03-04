@@ -10,7 +10,7 @@ export const MobileFrame = forwardRef<HTMLDivElement, { children: React.ReactNod
       {/* Top notch */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-neutral-800 rounded-b-2xl z-10 mt-1" />
       {/* Content (screen) */}
-      <div className="relative w-full h-full flex items-center justify-center bg-black">
+      <div className="absolute inset-0">
         {children}
       </div>
     </div>

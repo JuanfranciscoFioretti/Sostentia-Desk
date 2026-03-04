@@ -96,18 +96,20 @@ export function Footer({ locale }: FooterProps) {
               <p className="text-xs text-muted-foreground mb-3">
                 {t('newsletter.description')}
               </p>
-              <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+              <form onSubmit={handleNewsletterSubmit} className="flex gap-2" suppressHydrationWarning>
                 <Input
                   type="email"
                   placeholder={t('newsletter.placeholder')}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 h-9 text-sm"
+                  suppressHydrationWarning
                 />
                 <Button
                   type="submit"
                   variant="primary"
                   size="sm"
+                  suppressHydrationWarning
                 >
                   {t('newsletter.button')}
                 </Button>
@@ -118,7 +120,7 @@ export function Footer({ locale }: FooterProps) {
             </div>
           </div>
 
-          {/* Product Links */}
+          {/* Product Links - Características, precios, seguridad y roadmap del producto
           <div>
             <h3 className="text-sm font-semibold mb-4">{t('product.title')}</h3>
             <ul className="space-y-3">
@@ -134,8 +136,9 @@ export function Footer({ locale }: FooterProps) {
               ))}
             </ul>
           </div>
+          */}
 
-          {/* Company Links */}
+          {/* Company Links - Información sobre la empresa, equipo y blog
           <div>
             <h3 className="text-sm font-semibold mb-4">{t('company.title')}</h3>
             <ul className="space-y-3">
@@ -151,8 +154,9 @@ export function Footer({ locale }: FooterProps) {
               ))}
             </ul>
           </div>
+          */}
 
-          {/* Resources Links */}
+          {/* Resources Links - Documentación, API, soporte y comunidad
           <div>
             <h3 className="text-sm font-semibold mb-4">{t('resources.title')}</h3>
             <ul className="space-y-3">
@@ -168,8 +172,9 @@ export function Footer({ locale }: FooterProps) {
               ))}
             </ul>
           </div>
+          */}
 
-          {/* Legal Links */}
+          {/* Legal Links - Privacidad, términos de servicio, cookies y licencias
           <div>
             <h3 className="text-sm font-semibold mb-4">{t('legal.title')}</h3>
             <ul className="space-y-3">
@@ -185,6 +190,7 @@ export function Footer({ locale }: FooterProps) {
               ))}
             </ul>
           </div>
+          */}
         </div>
 
         {/* Bottom Section */}

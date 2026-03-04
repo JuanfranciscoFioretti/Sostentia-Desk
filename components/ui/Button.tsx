@@ -1,3 +1,5 @@
+'use client';
+
 import { ButtonHTMLAttributes, forwardRef } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cn } from '@/lib/utils';
@@ -30,7 +32,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary:
-        'bg-primary text-white hover:bg-primary/90 shadow-glow hover:shadow-glow-lg',
+        'bg-primary hover:bg-primary/90 shadow-glow hover:shadow-glow-lg text-[rgb(var(--foreground))]',
       secondary:
         'glass hover:bg-primary/10 text-foreground',
       outline:
@@ -50,6 +52,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         ref={ref}
+        suppressHydrationWarning
         className={cn(baseStyles, variants[variant], sizes[size], className)}
         disabled={disabled || isLoading}
         {...props}

@@ -61,13 +61,15 @@ export function FeaturesList() {
                     {feature.description}
                   </p>
                   <ul className="space-y-3">
-                    {(index === 2 ? ['Earn Points', 'Unlock Benefits', 'Happy Customers'] : ['Fast performance', 'Easy to use', 'Reliable & secure']).map(
-                      (item, i) => (
-                        <li key={i} className="flex items-center gap-3">
-                          <div className="w-2 h-2 rounded-full bg-primary" />
-                          <span className="text-muted-foreground">{item}</span>
-                        </li>
-                      )
+                    {feature.items && feature.items.length > 0 && (
+                      <>
+                        {feature.items.map((item: string, i: number) => (
+                          <li key={i} className="flex items-center gap-3">
+                            <div className="w-2 h-2 rounded-full bg-primary" />
+                            <span className="text-muted-foreground">{item}</span>
+                          </li>
+                        ))}
+                      </>
                     )}
                   </ul>
                 </div>
@@ -77,15 +79,13 @@ export function FeaturesList() {
                   {index === 0 ? (
                     <div className="flex items-center justify-center">
                       <MobileFrame>
-                        <div className="relative w-[220px] h-[480px]">
-                          <Image
-                            src="/images/screenshots/App-Screen-1.webp"
-                            alt="App screenshot"
-                            fill
-                            className="object-cover rounded-2xl"
-                            priority
-                          />
-                        </div>
+                        <Image
+                          src="/images/screenshots/App-Screen-1.webp"
+                          alt="App screenshot"
+                          fill
+                          className="object-cover"
+                          priority
+                        />
                       </MobileFrame>
                     </div>
                   ) : index === 1 ? (
@@ -105,15 +105,13 @@ export function FeaturesList() {
                   ) : index === 2 ? (
                     <div className="flex items-center justify-center">
                       <MobileFrame>
-                        <div className="relative w-[220px] h-[480px]">
-                          <Image
-                            src="/images/screenshots/App-Screen-2-Dark.webp"
-                            alt="Loyalty Program screenshot"
-                            fill
-                            className="object-cover rounded-2xl"
-                            priority
-                          />
-                        </div>
+                        <Image
+                          src="/images/screenshots/App-Screen-2-Dark.webp"
+                          alt="Loyalty Program screenshot"
+                          fill
+                          className="object-cover mt-2"
+                          priority
+                        />
                       </MobileFrame>
                     </div>
                   ) : index === 3 ? (

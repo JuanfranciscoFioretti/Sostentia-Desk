@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
@@ -15,8 +16,10 @@ export function SupportForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     subject: '',
     message: '',
+    plan: 'starter',
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
@@ -24,16 +27,32 @@ export function SupportForm() {
     e.preventDefault();
     setStatus('loading');
 
-    // Simulate API call
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const response = await fetch('/api/support', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '', plan: 'starter' });
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setStatus('error');
       setTimeout(() => setStatus('idle'), 5000);
-    }, 2000);
+    }
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -70,6 +89,53 @@ export function SupportForm() {
                   onChange={handleChange}
                   required
                 />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Input
+                  label={t('phone')}
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-4">{t('plan')}</label>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {[
+                    { value: 'starter', name: 'Starter', price: '$497/month' },
+                    { value: 'growth', name: 'Growth', price: '$597/month' },
+                    { value: 'enterprise', name: 'Enterprise Pro', price: '$1,290/month' },
+                  ].map((plan) => (
+                    <label
+                      key={plan.value}
+                      className={`relative flex flex-col items-center justify-center p-4 rounded-lg glass cursor-pointer transition-all duration-300 ${
+                        formData.plan === plan.value
+                          ? 'ring-2 ring-primary bg-primary/10'
+                          : 'hover:ring-1 hover:ring-primary/50'
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="plan"
+                        value={plan.value}
+                        checked={formData.plan === plan.value}
+                        onChange={handleChange}
+                        className="sr-only"
+                      />
+                      <div className="flex items-center justify-center w-5 h-5 rounded-full border-2 border-primary mb-2">
+                        {formData.plan === plan.value && (
+                          <Check className="w-3 h-3 text-primary" />
+                        )}
+                      </div>
+                      <span className="font-semibold text-center">{plan.name}</span>
+                      <span className="text-xs text-muted-foreground mt-1">{plan.price}</span>
+                    </label>
+                  ))}
+                </div>
               </div>
 
               <Input

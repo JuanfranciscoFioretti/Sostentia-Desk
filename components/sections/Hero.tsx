@@ -71,7 +71,7 @@ export function Hero({ locale }: HeroProps) {
                 className="group"
                 asChild
               >
-                <Link href={`/${locale}/register`}>
+                <Link href={`/${locale}/support`}>
                   {t('cta.primary')}
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>

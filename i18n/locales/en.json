@@ -14,7 +14,7 @@
     "titleHighlight": "Sostentia Desk",
     "subtitle": "The all-in-one platform that combines a powerful mobile app and comprehensive web dashboard to streamline your business operations.",
     "cta": {
-      "primary": "Start Free Trial",
+      "primary": "Start Now",
       "secondary": "Watch Demo"
     },
     "stats": {
@@ -35,116 +35,148 @@
         "title": "Native Mobile App",
         "description": "Built with React Native for seamless iOS and Android experience. Access your business data anytime, anywhere with our lightning-fast mobile application.",
         "icon": "smartphone"
+          ,"items": ["iOS & Android", "Offline Access", "In-App Bookings"]
       },
       {
         "id": "web-dashboard",
         "title": "Comprehensive Web Dashboard",
         "description": "Full-featured React dashboard with real-time analytics, advanced reporting, and intuitive data visualization to make informed decisions.",
         "icon": "monitor"
+          ,"items": ["Real-Time Data", "Products + Events Creation", "Orders Management"]
       },
       {
         "id": "loyalty-program",
         "title": "Loyalty Program",
         "description": "Reward your customers with points, discounts, and exclusive benefits. Build lasting relationships and increase customer lifetime value.",
         "icon": "gift"
+          ,"items": ["Earn Points", "Unlock Benefits", "Greater Engagement"]
       },
       {
         "id": "real-time-sync",
         "title": "Real-Time Synchronization",
         "description": "All your data syncs instantly across mobile and web platforms. Work seamlessly from any device without missing a beat.",
         "icon": "refresh-cw"
+          ,"items": ["Instant Updates", "Zero Latency", "Multi-Device Sync"]
       },
       {
         "id": "team-collaboration",
         "title": "Team Collaboration",
         "description": "Invite team members, assign roles, and collaborate efficiently with built-in communication tools and permission management.",
         "icon": "users"
+          ,"items": ["Create Members", "Assign Roles", "Limited Access"]
       },
       {
         "id": "advanced-analytics",
         "title": "Advanced Analytics",
         "description": "Get deep insights into your business with customizable reports, charts, and KPI tracking that help you grow faster.",
         "icon": "bar-chart"
+          ,"items": ["Real-Time Analytics", "KPI Tracking", "Data Insights"]
       },
       {
         "id": "real-time-chat",
         "title": "Real Time Chat Support",
         "description": "Integrated real-time chat to communicate directly with your customers. Provide instant support and build stronger relationships.",
         "icon": "message-circle"
+          ,"items": ["Instant Response", "24/7 Support", "Customer Satisfaction"]
       }
     ]
   },
   "pricing": {
+    "infrastructure": {
+      "title": "Infrastructure & Cost Coverage Per Client",
+      "description": "Each client receives an isolated deployment including:",
+      "features": [
+        "Dedicated AWS ECS/Fargate backend (24/7)",
+        "Dedicated Dashboard instance",
+        "MongoDB Atlas database cluster",
+        "CloudFront CDN",
+        "CloudWatch monitoring",
+        "Stripe Connect integration",
+        "App Store publishing (Google Play + Apple Developer Program)"
+      ]
+    },
     "section": {
       "badge": "Pricing",
       "title": "Choose Your Perfect Plan",
-      "subtitle": "Transparent pricing that grows with your business"
+      "subtitle": "Scalable pricing that grows with your business"
     },
     "toggle": {
       "monthly": "Monthly",
       "annually": "Annually",
-      "save": "Save 20%"
+      "save": "2 months free"
     },
     "plans": [
       {
         "id": "starter",
         "name": "Starter",
-        "description": "Perfect for individuals and small teams just getting started",
+        "description": "Ideal for small restaurants",
         "price": {
-          "monthly": 0,
-          "annually": 0
+          "monthly": 297,
+          "annually": 2970
         },
+        "commission": "10%",
+        "infrastructure": "~$90/month",
+        "locations": "1 location",
+        "performance": "Standard performance cluster",
+        "featurePrice": "$15/month per new feature",
+        "launchFee": "$490 one-time",
         "features": [
-          "Up to 3 users",
-          "Mobile app access",
-          "Basic web dashboard",
-          "5GB storage",
-          "Email support",
-          "Basic analytics"
+          "Customized iOS + Android App",
+          "Web Admin Dashboard",
+          "Secure Cloud Hosting Included",
+          "Setup: $299 (one-time payment)",
+          "10% commission per online transaction",
+          "New features: +$15/month per feature added"
         ],
-        "cta": "Start Free",
+        "cta": "Get Started",
         "popular": false
       },
       {
-        "id": "professional",
-        "name": "Professional",
-        "description": "For growing businesses that need more power and flexibility",
+        "id": "growth",
+        "name": "Growth",
+        "description": "Designed for scaling restaurants",
         "price": {
-          "monthly": 29,
-          "annually": 279
+          "monthly": 597,
+          "annually": 5970
         },
+        "commission": "7%",
+        "infrastructure": "~$200/month",
+        "locations": "Multiple locations",
+        "performance": "Enhanced performance infrastructure",
+        "featurePrice": "$5/month per new feature",
+        "launchFee": "$890 one-time",
         "features": [
-          "Up to 15 users",
-          "Full mobile & web access",
-          "Advanced dashboard",
-          "50GB storage",
-          "Priority support",
-          "Advanced analytics",
-          "Custom reports",
-          "API access",
-          "Team collaboration tools"
+          "Everything included in Starter",
+          "Optimized infrastructure for higher traffic",
+          "Advanced reporting and promotional tools",
+          "Setup: $600 (one-time payment)",
+          "7% commission per online transaction",
+          "New features: +$5/month per feature added"
         ],
         "cta": "Start Trial",
         "popular": true
       },
       {
         "id": "enterprise",
-        "name": "Enterprise",
-        "description": "Custom solutions for large organizations with specific needs",
+        "name": "Enterprise Pro",
+        "description": "Designed for chains & high-volume brands",
         "price": {
-          "monthly": "Custom",
-          "annually": "Custom"
+          "monthly": 1290,
+          "annually": 12900
         },
+        "commission": "3%",
+        "infrastructure": "~$422/month",
+        "locations": "Multi-location support",
+        "performance": "Premium multi-AZ infrastructure",
+        "featurePrice": "Included",
+        "launchFee": "$1,500 one-time",
         "features": [
-          "Unlimited users",
-          "All Professional features",
-          "Unlimited storage",
-          "24/7 dedicated support",
-          "Custom integrations",
-          "Advanced security features",
-          "SLA guarantee",
-          "Onboarding & training",
-          "Custom development"
+          "Everything included in Professional",
+          "Dedicated and auto-scalable infrastructure",
+          "24/7 priority support",
+          "Setup: $1,200 (one-time payment)",
+          "3% commission per online transaction",
+          "New features: Included at no additional cost"
         ],
         "cta": "Contact Sales",
         "popular": false
@@ -154,20 +186,20 @@
       "title": "Frequently Asked Questions",
       "items": [
         {
-          "question": "Can I change my plan later?",
-          "answer": "Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the charges."
+          "question": "What does 'infrastructure cost coverage' mean?",
+          "answer": "We invest in dedicated cloud infrastructure for your business. These amounts represent our infrastructure costs covered by us - you benefit from enterprise-grade AWS resources without managing them."
         },
         {
-          "question": "What payment methods do you accept?",
-          "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for Enterprise plans."
+          "question": "What is the commission?",
+          "answer": "Depending on your plan, we take a small percentage of your total processed transactions. This allows us to align our success with yours."
         },
         {
-          "question": "Is there a free trial?",
-          "answer": "Yes! Our Professional plan comes with a 14-day free trial. No credit card required to start."
+          "question": "Can I upgrade or downgrade anytime?",
+          "answer": "Yes! You can change your plan at any time. Changes take effect immediately, and we'll adjust charges proportionally."
         },
         {
-          "question": "What happens to my data if I cancel?",
-          "answer": "You can export all your data at any time. After cancellation, we keep your data for 30 days before permanent deletion."
+          "question": "What about new features - are they always charged?",
+          "answer": "Most new features are included in the Enterprise plan. Basic and Professional plans charge a recurring monthly fee for additional features developed for your needs."
         }
       ]
     }
@@ -188,6 +220,12 @@
       "news": "News"
     }
   },
+    "ctaSection": {
+      "title": "Ready to Transform Your Business?",
+      "description": "Join thousands of businesses already using Sostentia Desk to streamline their operations and boost productivity.",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More"
+    },
   "about": {
     "hero": {
       "badge": "About Us",
@@ -196,7 +234,7 @@
     },
     "story": {
       "title": "Our Story",
-      "content": "Founded in 2024, Sostentia Desk was born from a simple observation: businesses needed a unified platform that works seamlessly across mobile and web. We've built a solution that combines the convenience of mobile access with the power of comprehensive web analytics."
+      "content": "We believe that great businesses deserve better tools. Sostentia was born from a simple but powerful insight: teams were losing countless hours navigating fragmented platforms, struggling with data that didn't sync, and managing operations across disconnected systems.\n\nSo we built differently. We created a unified platform that brings everything together—mobile app, web dashboard, real-time analytics, and customer insights—all synchronized and accessible from anywhere. Our mission is to give every business, regardless of size, enterprise-grade tools that make complexity simple.\n\nBut technology alone isn't enough. We believe in real relationships. That's why we're committed to person-to-person support, ensuring you're never just a ticket number. We succeed when you succeed, and we're here to support every step of your growth journey.\n\nSince 2024, we've been obsessed with one thing: eliminating the friction between you and your data, between your team and their goals. Because when your team has the right tools and the right support, there's nothing you can't achieve."
     },
     "values": {
       "title": "Our Values",
@@ -270,8 +308,16 @@
       "title": "Send Us a Message",
       "name": "Full Name",
       "email": "Email Address",
+      "phone": "Phone Number",
       "subject": "Subject",
       "message": "Your Message",
+      "plan": "Interested Plan",
+      "planOptions": {
+        "none": "Not sure yet",
+        "starter": "Starter - $497/month",
+        "growth": "Growth - $597/month",
+        "enterprise": "Enterprise Pro - $1,290/month"
+      },
       "submit": "Send Message",
       "success": "Message sent successfully! We'll get back to you soon.",
       "error": "Failed to send message. Please try again."

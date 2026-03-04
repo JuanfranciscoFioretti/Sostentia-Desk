@@ -1,3 +1,4 @@
+/*
 import { Container } from '@/components/ui/Container';
 import { RegistrationForm } from '@/components/forms/RegistrationForm';
 
@@ -21,3 +22,9 @@ export default async function RegisterPage({
     </section>
   );
 }
+
+// Register page is currently disabled
+export default function RegisterPage() {
+  return null;
+}
+*/

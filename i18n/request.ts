@@ -1,6 +1,6 @@
 import { getRequestConfig } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { locales } from './config';
+import { locales, timeZone } from './config';
 
 export default getRequestConfig(async ({ locale }) => {
   // Validate that the incoming `locale` parameter is valid
@@ -8,7 +8,7 @@ export default getRequestConfig(async ({ locale }) => {
 
   return {
     messages: (await import(`./locales/${locale}.json`)).default,
-    timeZone: 'UTC',
+    timeZone,
     now: new Date()
   };
 });
