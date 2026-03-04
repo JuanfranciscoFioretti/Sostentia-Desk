@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+dist
+build
+.git
+.gitignore
+.env.local
+.vercel
+*.mp4
+*.mov
+*.avi
+public/videos
+.git/lfs

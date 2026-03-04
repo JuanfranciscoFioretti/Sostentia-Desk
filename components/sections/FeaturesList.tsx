@@ -26,6 +26,7 @@ export function FeaturesList() {
     title: string;
     description: string;
     icon: string;
+    items?: string[];
   }>;
 
   return (

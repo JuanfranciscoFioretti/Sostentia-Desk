@@ -13,13 +13,13 @@ interface LayoutClientProps {
 
 export function LayoutClient({ children, locale, messages }: LayoutClientProps) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <NextIntlClientProvider messages={messages} locale={locale}>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
         <div className="relative w-full flex flex-col">
           <Header locale={locale} />
           <main className="w-full flex-1">
@@ -27,7 +27,7 @@ export function LayoutClient({ children, locale, messages }: LayoutClientProps) 
           </main>
           <Footer locale={locale} />
         </div>
-      </NextIntlClientProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </NextIntlClientProvider>
   );
 }

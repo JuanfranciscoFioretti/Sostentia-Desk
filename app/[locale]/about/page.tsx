@@ -3,12 +3,14 @@ import { AboutStory } from '@/components/sections/AboutStory';
 import { ValuesSection } from '@/components/sections/ValuesSection';
 import { CTASection } from '@/components/sections/CTASection';
 
-export default async function AboutPage({
+export const dynamic = 'force-dynamic';
+
+export default function AboutPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const locale = params.locale;
   
   return (
     <>
