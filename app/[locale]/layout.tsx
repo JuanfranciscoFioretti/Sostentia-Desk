@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { locales } from '@/i18n/config';
-import { setRequestLocale } from 'next-intl/server';
 import { LayoutClient } from './LayoutClient';
 import '../globals.css';
 
@@ -34,18 +33,10 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  // Enable static rendering for this locale
-  setRequestLocale(locale);
-
-  // Load messages dynamically
-  let messages = {};
-  try {
-    const loadedMessages = (await import(`@/i18n/locales/${locale}.json`)).default;
-    messages = loadedMessages || {};
-  } catch (e) {
-    console.error(`Failed to load messages for locale ${locale}:`, e);
-    messages = {};
-  }
+  // Load messages statically
+  const messages = locale === 'es' 
+    ? (await import('@/i18n/locales/es.json')).default 
+    : (await import('@/i18n/locales/en.json')).default;
 
   return (
     <html lang={locale} suppressHydrationWarning>
