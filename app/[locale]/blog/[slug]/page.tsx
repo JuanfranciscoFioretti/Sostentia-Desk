@@ -4,9 +4,10 @@ import { ArrowLeft } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { getPostBySlug, getAllPosts } from '@/lib/blog';
+import { getAllPosts } from '@/lib/blog';
 import { formatDate } from '@/lib/utils';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import type { BlogPost } from '@/lib/blog';
 
 export async function generateStaticParams() {
   // Get English posts for static params
@@ -28,7 +29,18 @@ export default async function BlogPostPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const post = getPostBySlug(slug, locale);
+  
+  let post: BlogPost | null = null;
+  try {
+    const response = await fetch(`${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'}/api/blog/${locale}/${slug}`, {
+      cache: 'no-store'
+    });
+    if (response.ok) {
+      post = await response.json();
+    }
+  } catch (error) {
+    console.error('Error fetching blog post:', error);
+  }
 
   if (!post) {
     notFound();

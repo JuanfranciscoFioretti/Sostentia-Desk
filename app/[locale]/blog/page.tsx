@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Container } from '@/components/ui/Container';
-import { getAllPosts } from '@/lib/blog';
 import { formatDate } from '@/lib/utils';
+import type { BlogPost } from '@/lib/blog';
 
 export default async function BlogPage({
   params,
@@ -11,7 +11,18 @@ export default async function BlogPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const posts = getAllPosts(locale);
+  
+  let posts: BlogPost[] = [];
+  try {
+    const response = await fetch(`${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'}/api/blog/${locale}`, {
+      cache: 'no-store'
+    });
+    if (response.ok) {
+      posts = await response.json();
+    }
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+  }
 
   return (
     <section className="pt-32 pb-24">
