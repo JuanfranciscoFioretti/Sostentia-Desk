@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { headers } from 'next/headers';
 import { ArrowLeft } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
@@ -20,10 +21,14 @@ export default async function BlogPostPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
+  const headersList = await headers();
+  const protocol = headersList.get('x-forwarded-proto') || 'http';
+  const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost:3000';
+  const baseUrl = `${protocol}://${host}`;
   
   let post: BlogPost | null = null;
   try {
-    const response = await fetch(`${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'}/api/blog/${locale}/${slug}`, {
+    const response = await fetch(`${baseUrl}/api/blog/${locale}/${slug}`, {
       cache: 'no-store'
     });
     if (response.ok) {

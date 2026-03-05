@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { headers } from 'next/headers';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Container } from '@/components/ui/Container';
@@ -11,10 +12,14 @@ export default async function BlogPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const headersList = await headers();
+  const protocol = headersList.get('x-forwarded-proto') || 'http';
+  const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost:3000';
+  const baseUrl = `${protocol}://${host}`;
   
   let posts: BlogPost[] = [];
   try {
-    const response = await fetch(`${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'}/api/blog/${locale}`, {
+    const response = await fetch(`${baseUrl}/api/blog/${locale}`, {
       cache: 'no-store'
     });
     if (response.ok) {
