@@ -4,23 +4,14 @@ import { ArrowLeft } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { getAllPosts } from '@/lib/blog';
 import { formatDate } from '@/lib/utils';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import type { BlogPost } from '@/lib/blog';
 
 export async function generateStaticParams() {
-  // Get English posts for static params
-  const posts = getAllPosts('en');
-  return posts.map((post) => ({
-    locale: 'en',
-    slug: post.slug,
-  })).concat(
-    getAllPosts('es').map((post) => ({
-      locale: 'es',
-      slug: post.slug,
-    }))
-  );
+  // Return empty array to enable On-Demand ISR
+  // Pages will be generated on first request
+  return [];
 }
 
 export default async function BlogPostPage({
