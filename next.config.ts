@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    staticGenerationRetryCount: 0,
+  },
 };
 
 export default withNextIntl(nextConfig);
