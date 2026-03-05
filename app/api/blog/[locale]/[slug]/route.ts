@@ -3,10 +3,11 @@ import { NextResponse } from 'next/server';
 
 export async function GET(
   _request: Request,
-  { params }: { params: { locale: string; slug: string } }
+  { params }: { params: Promise<{ locale: string; slug: string }> }
 ) {
   try {
-    const post = getPostBySlug(params.slug, params.locale);
+    const { locale, slug } = await params;
+    const post = getPostBySlug(slug, locale);
     
     if (!post) {
       return NextResponse.json({ error: 'Post not found' }, { status: 404 });

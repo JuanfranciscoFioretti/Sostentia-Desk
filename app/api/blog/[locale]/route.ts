@@ -3,10 +3,11 @@ import { NextResponse } from 'next/server';
 
 export async function GET(
   _request: Request,
-  { params }: { params: { locale: string } }
+  { params }: { params: Promise<{ locale: string }> }
 ) {
   try {
-    const posts = getAllPosts(params.locale);
+    const { locale } = await params;
+    const posts = getAllPosts(locale);
     return NextResponse.json(posts);
   } catch (error) {
     console.error('Error fetching posts:', error);
