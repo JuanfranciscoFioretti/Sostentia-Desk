@@ -1,10 +1,20 @@
-import createMiddleware from 'next-intl/middleware';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 import { locales, defaultLocale } from './i18n/config';
 
-export const proxy = createMiddleware({
-  locales,
-  defaultLocale,
-});
+export function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  const pathnameHasLocale = (locales as readonly string[]).some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  if (pathnameHasLocale) return NextResponse.next();
+
+  const url = request.nextUrl.clone();
+  url.pathname = `/${defaultLocale}${pathname}`;
+  return NextResponse.redirect(url);
+}
 
 export const config = {
   matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
