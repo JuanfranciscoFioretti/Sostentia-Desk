@@ -2,15 +2,16 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <html>
-      <body className="flex items-center justify-center min-h-screen bg-gray-100">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">404 - Página no encontrada</h1>
-          <p className="text-gray-600 mb-8">La página que buscas no existe.</p>
-          <Link href="/en" className="bg-blue-500 text-white px-6 py-2 rounded">
-            Volver al inicio
-          </Link>
-        </div>
+    <html lang="en">
+      <body style={{ padding: '20px', fontFamily: 'system-ui, sans-serif', textAlign: 'center', paddingTop: '80px' }}>
+        <h1 style={{ fontSize: '2rem', marginBottom: '16px' }}>404 - Page Not Found</h1>
+        <p style={{ color: '#666', marginBottom: '32px' }}>The page you are looking for does not exist.</p>
+        <Link
+          href="/en"
+          style={{ backgroundColor: '#3b82f6', color: 'white', padding: '10px 24px', borderRadius: '6px', textDecoration: 'none' }}
+        >
+          Go Home
+        </Link>
       </body>
     </html>
   );

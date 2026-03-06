@@ -9,8 +9,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = defaultLocale;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const messages = (await import(`./locales/${locale}.json`)) as any;
+
   return {
     locale,
-    messages: (await import(`./locales/${locale}.json`)).default,
+    messages: messages.default ?? messages,
   };
 });

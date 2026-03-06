@@ -4,7 +4,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
       {
@@ -13,8 +12,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  experimental: {
-    staticGenerationRetryCount: 0,
+  turbopack: {
+    root: process.cwd(),
   },
 };
 
