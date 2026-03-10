@@ -68,8 +68,9 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
 
 export function useTheme() {
   const context = useContext(ThemeContext);
+  // Return default values during SSR to avoid errors
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    return { theme: 'light' as const, toggleTheme: () => {} };
   }
   return context;
 }
