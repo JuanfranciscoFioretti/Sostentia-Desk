@@ -1,13 +1,15 @@
+'use client';
+
 import { Hero } from '@/components/sections/Hero';
 import { FeaturesPreview } from '@/components/sections/FeaturesPreview';
 import { CTASection } from '@/components/sections/CTASection';
 
-export default async function HomePage({
+export default function HomePage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
   
   return (
     <>

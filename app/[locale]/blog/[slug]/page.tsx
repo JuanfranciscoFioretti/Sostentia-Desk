@@ -18,9 +18,9 @@ export async function generateStaticParams() {
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>;
+  params: { locale: string; slug: string };
 }) {
-  const { locale, slug } = await params;
+  const { locale, slug } = params;
   const headersList = await headers();
   const protocol = headersList.get('x-forwarded-proto') || 'http';
   const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost:3000';

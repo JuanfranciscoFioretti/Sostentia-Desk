@@ -9,9 +9,9 @@ import type { BlogPost } from '@/lib/blog';
 export default async function BlogPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
   const headersList = await headers();
   const protocol = headersList.get('x-forwarded-proto') || 'http';
   const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost:3000';

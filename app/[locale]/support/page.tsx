@@ -1,12 +1,14 @@
+'use client';
+
 import { SupportHero } from '@/components/sections/SupportHero';
 import { SupportForm } from '@/components/sections/SupportForm';
 
-export default async function SupportPage({
+export default function SupportPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const locale = params.locale;
   
   return (
     <>

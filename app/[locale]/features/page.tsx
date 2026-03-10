@@ -1,14 +1,16 @@
+'use client';
+
 import { FeaturesHero } from '@/components/sections/FeaturesHero';
 import { FeaturesList } from '@/components/sections/FeaturesList';
 import { CTASection } from '@/components/sections/CTASection';
 
-export default async function FeaturesPage({
+export default function FeaturesPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
-  
+  const { locale } = params;
+
   return (
     <>
       <FeaturesHero />

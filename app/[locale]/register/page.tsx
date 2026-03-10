@@ -1,12 +1,14 @@
+'use client';
+
 import { Container } from '@/components/ui/Container';
 import { RegistrationForm } from '@/components/forms/RegistrationForm';
 
-export default async function RegisterPage({
+export default function RegisterPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
 
   return (
     <section className="pt-40 pb-24">

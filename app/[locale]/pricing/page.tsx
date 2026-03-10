@@ -1,14 +1,16 @@
+'use client';
+
 import { PricingHero } from '@/components/sections/PricingHero';
 import { PricingCards } from '@/components/sections/PricingCards';
 import { PricingFAQ } from '@/components/sections/PricingFAQ';
 import { CTASection } from '@/components/sections/CTASection';
 
-export default async function PricingPage({
+export default function PricingPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
   
   return (
     <>
