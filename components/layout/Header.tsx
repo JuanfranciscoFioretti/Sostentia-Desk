@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { ThemeToggle } from '@/components/theme/ThemeToggle';
 import { LanguageSelector } from '@/components/layout/LanguageSelector';
 import { cn } from '@/lib/utils';
 
@@ -70,7 +69,6 @@ export function Header({ locale }: HeaderProps) {
         {/* Right Section */}
         <div className="flex items-center gap-3">
           <div className="hidden md:flex items-center gap-3">
-            <ThemeToggle />
             <LanguageSelector />
             {/* <Button
               variant="ghost"
@@ -118,7 +116,6 @@ export function Header({ locale }: HeaderProps) {
             </Link>
           ))}
           <div className="flex items-center gap-3 px-4 pt-4 border-t border-border">
-            <ThemeToggle />
             <LanguageSelector />
           </div>
           <div className="flex flex-col gap-2 px-4 pt-2">

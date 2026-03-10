@@ -9,6 +9,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-};
+} as NextConfig & { webpack?: boolean };
 
 export default nextConfig;

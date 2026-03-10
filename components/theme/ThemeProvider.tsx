@@ -1,6 +1,5 @@
 'use client';
 
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { type ReactNode } from 'react';
 
 interface ThemeProviderProps {
@@ -8,10 +7,7 @@ interface ThemeProviderProps {
   [key: string]: any;
 }
 
+// Placeholder ThemeProvider (next-themes removed due to build issues)
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return (
-    <NextThemesProvider storageKey="sostentia-theme" {...props}>
-      {children}
-    </NextThemesProvider>
-  );
+  return <>{children}</>;
 }

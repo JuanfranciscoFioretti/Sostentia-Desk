@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { locales } from '@/i18n/config';
-import { LayoutClient } from './LayoutClient';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -33,17 +32,10 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  // Load messages statically
-  const messages = locale === 'es' 
-    ? (await import('@/i18n/locales/es.json')).default 
-    : (await import('@/i18n/locales/en.json')).default;
-
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <LayoutClient locale={locale} messages={messages}>
-          {children}
-        </LayoutClient>
+        {children}
       </body>
     </html>
   );
