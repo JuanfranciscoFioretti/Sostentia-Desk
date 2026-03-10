@@ -3,9 +3,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { LanguageSelector } from '@/components/layout/LanguageSelector';
+import { useTheme } from '@/components/theme/ThemeProvider';
 import { cn } from '@/lib/utils';
 
 interface HeaderProps {
@@ -14,8 +15,14 @@ interface HeaderProps {
 
 export function Header({ locale }: HeaderProps) {
   const t = useTranslations('nav');
+  const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,6 +84,20 @@ export function Header({ locale }: HeaderProps) {
             >
               <Link href={`/${locale}/login`}>{t('login')}</Link>
             </Button> */}
+            {mounted && (
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg hover:bg-primary/10 transition-colors duration-300"
+                aria-label="Toggle theme"
+                suppressHydrationWarning
+              >
+                {theme === 'dark' ? (
+                  <Sun className="h-5 w-5 text-primary" />
+                ) : (
+                  <Moon className="h-5 w-5 text-primary" />
+                )}
+              </button>
+            )}
             <Button
               variant="primary"
               size="sm"
@@ -86,19 +107,35 @@ export function Header({ locale }: HeaderProps) {
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            suppressHydrationWarning
-            className="md:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-primary" />
-            ) : (
-              <Menu className="h-6 w-6 text-primary" />
+          {/* Mobile menu button and theme toggle */}
+          <div className="flex items-center gap-2">
+            {mounted && (
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg hover:bg-primary/10 transition-colors duration-300 md:hidden"
+                aria-label="Toggle theme"
+                suppressHydrationWarning
+              >
+                {theme === 'dark' ? (
+                  <Sun className="h-5 w-5 text-primary" />
+                ) : (
+                  <Moon className="h-5 w-5 text-primary" />
+                )}
+              </button>
             )}
-          </button>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              suppressHydrationWarning
+              className="md:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6 text-primary" />
+              ) : (
+                <Menu className="h-6 w-6 text-primary" />
+              )}
+            </button>
+          </div>
         </div>
       </nav>
 
