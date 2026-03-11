@@ -1,5 +1,6 @@
 'use client';
 
+import { use } from 'react';
 import { AboutHero } from '@/components/sections/AboutHero';
 import { AboutStory } from '@/components/sections/AboutStory';
 import { ValuesSection } from '@/components/sections/ValuesSection';
@@ -8,9 +9,9 @@ import { CTASection } from '@/components/sections/CTASection';
 export default function AboutPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params.locale;
+  const { locale } = use(params);
   
   return (
     <>

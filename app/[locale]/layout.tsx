@@ -34,9 +34,7 @@ export default async function LocaleLayout({
   }
 
   // Load messages statically
-  const messages = locale === 'es' 
-    ? (await import('@/i18n/locales/es.json')).default 
-    : (await import('@/i18n/locales/en.json')).default;
+  const messages = (await import(`@/i18n/locales/${locale}.json`)).default;
 
   return (
     <html lang={locale} suppressHydrationWarning>

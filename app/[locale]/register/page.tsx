@@ -1,14 +1,15 @@
 'use client';
 
+import { use } from 'react';
 import { Container } from '@/components/ui/Container';
 import { RegistrationForm } from '@/components/forms/RegistrationForm';
 
 export default function RegisterPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = params;
+  const { locale } = use(params);
 
   return (
     <section className="pt-40 pb-24">

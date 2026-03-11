@@ -1,10 +1,10 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter, usePathname } from '@/i18n/navigation';
 import { locales } from '@/i18n/config';
 import { Globe, Check } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function LanguageSelector() {
@@ -12,23 +12,50 @@ export function LanguageSelector() {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [menuPosition, setMenuPosition] = useState({ top: 0, right: 0 });
+
+  useEffect(() => {
+    if (isOpen && buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect();
+      setMenuPosition({
+        top: rect.bottom + 8,
+        right: window.innerWidth - rect.right,
+      });
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }
+  }, [isOpen]);
 
   const handleLocaleChange = (newLocale: string) => {
-    const segments = pathname.split('/');
-    segments[1] = newLocale;
-    const newPath = segments.join('/');
-    router.push(newPath);
+    router.push(pathname, { locale: newLocale });
     setIsOpen(false);
   };
 
   const languages = {
-    en: { name: 'English', flag: '🇺🇸' },
+    en: { name: 'English', flag: 'ENG' },
     es: { name: 'Español', flag: '🇪🇸' },
+    da: { name: 'Dansk', flag: '🇩🇰' },
   };
 
   return (
-    <div className="relative">
+    <div ref={containerRef}>
       <button
+        ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         suppressHydrationWarning
         className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-primary/10 transition-all duration-300"
@@ -47,7 +74,12 @@ export function LanguageSelector() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute right-0 top-full mt-2 w-48 glass rounded-2xl shadow-xl z-50 overflow-hidden border border-border/50"
+            style={{
+              position: 'fixed',
+              top: `${menuPosition.top}px`,
+              right: `${menuPosition.right}px`,
+            }}
+            className="w-48 glass rounded-2xl shadow-xl z-50 overflow-hidden border border-border/50"
           >
             <div className="py-2">
               {locales.map((loc, index) => (
@@ -63,7 +95,7 @@ export function LanguageSelector() {
                       : 'text-foreground hover:bg-primary/10'
                   }`}
                 >
-                  <span className="text-lg">{languages[loc].flag}</span>
+                  <span className={loc === 'en' ? 'text-xs font-bold' : 'text-lg'}>{languages[loc].flag}</span>
                   <span className="flex-1 text-left">{languages[loc].name}</span>
                   {locale === loc && (
                     <Check className="h-4 w-4 text-primary flex-shrink-0" />

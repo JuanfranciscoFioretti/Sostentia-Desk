@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 // Inline to avoid Edge Runtime import resolution issues
-const LOCALES = ['en', 'es'];
+const LOCALES = ['en', 'es', 'da'];
 const DEFAULT_LOCALE = 'en';
 
 export function proxy(request: NextRequest) {

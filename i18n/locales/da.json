@@ -1,0 +1,434 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "features": "Funktioner",
+    "pricing": "Priser",
+    "blog": "Blog",
+    "about": "Om Os",
+    "support": "Support",
+    "getStarted": "Kom i gang",
+    "login": "Log ind"
+  },
+  "hero": {
+    "title": "Styr Din Forretning med",
+    "titleHighlight": "Sostentia Desk",
+    "subtitle": "Alt-i-én-platformen, der kombinerer en kraftig mobilapp og komplet webdashboard for at strømline dine forretningsoperationer.",
+    "cta": {
+      "primary": "Start Nu",
+      "secondary": "Se Demo"
+    },
+    "stats": {
+      "users": "10K+ Aktive Brugere",
+      "rating": "4.9/5 Bedømmelse",
+      "uptime": "99.9% Oppetid"
+    }
+  },
+  "features": {
+    "section": {
+      "badge": "Funktioner",
+      "title": "Alt Du Har Brug for for at Få Succes",
+      "subtitle": "Kraftige funktioner designet til moderne virksomheder"
+    },
+    "list": [
+      {
+        "id": "mobile-app",
+        "title": "Indfødt Mobilapp",
+        "description": "Bygget med React Native for en problemfri iOS- og Android-oplevelse. Få adgang til dine forretningsdata når som helst, hvor som helst med vores ultrafast mobilapplikation.",
+        "icon": "smartphone",
+        "items": ["iOS & Android", "Offline Adgang", "In-App Bookinger"]
+      },
+      {
+        "id": "web-dashboard",
+        "title": "Komprehensivt Webdashboard",
+        "description": "Fuldudrustet React-dashboard med analyser i realtid, avanceret rapportering og intuitiv datavisualisering for at træffe informerede beslutninger.",
+        "icon": "monitor",
+        "items": ["Data i Realtid", "Produkt- og Eventoprettelse", "Ordrestyring"]
+      },
+      {
+        "id": "loyalty-program",
+        "title": "Loyalitetsprogram",
+        "description": "Belønne dine kunder med point, rabatter og eksklusive fordele. Opbyg varige relationer og øg kundens levetidsværdi.",
+        "icon": "gift",
+        "items": ["Tjene Point", "Låse Fordele op", "Større Engagement"]
+      },
+      {
+        "id": "real-time-sync",
+        "title": "Synkronisering i Realtid",
+        "description": "Alle dine data synkroniseres øjeblikkeligt på tværs af mobile og webplatforme. Arbejd problemfrit fra enhver enhed uden at miste tempoet.",
+        "icon": "refresh-cw",
+        "items": ["Øjeblikkelige Opdateringer", "Nul Latens", "Multi-Enhed Synkronisering"]
+      },
+      {
+        "id": "team-collaboration",
+        "title": "Teamsamarbejde",
+        "description": "Inviter teammedlemmer, tildel roller og samarbejd effektivt med integrerede kommunikationsværktøjer og tilladelsesstyring.",
+        "icon": "users",
+        "items": ["Opret Medlemmer", "Tildel Roller", "Begrænset Adgang"]
+      },
+      {
+        "id": "advanced-analytics",
+        "title": "Avanceret Analytics",
+        "description": "Få dybgående indsigt i din forretning med tilpassede rapporter, diagrammer og KPI-sporing, der hjælper dig med at vokse hurtigere.",
+        "icon": "bar-chart",
+        "items": ["Analytik i Realtid", "KPI-sporing", "Data Indsigt"]
+      },
+      {
+        "id": "real-time-chat",
+        "title": "Realtids Chat Support",
+        "description": "Integreret realtidschat for at kommunikere direkte med dine kunder. Yd øjeblikkelig support og opbyg stærkere relationer.",
+        "icon": "message-circle",
+        "items": ["Øjeblikkelig Svar", "24/7 Support", "Kundetilfredshed"]
+      }
+    ]
+  },
+  "pricing": {
+    "infrastructure": {
+      "title": "Infrastruktur- og Omkostningsdækning Pr. Klient",
+      "description": "Hver klient modtager en isoleret implementering, som omfatter:",
+      "features": [
+        "Dedikeret AWS ECS/Fargate-backend (24/7)",
+        "Dedikeret Dashboard-instans",
+        "MongoDB Atlas-databaseklynge",
+        "CloudFront CDN",
+        "CloudWatch-overvågning",
+        "Stripe Connect-integration",
+        "App Store-publicering (Google Play + Apple Developer Program)"
+      ]
+    },
+    "section": {
+      "badge": "Priser",
+      "title": "Vælg Din Perfekte Plan",
+      "subtitle": "Skalerbar prissætning, der vokser med din forretning"
+    },
+    "toggle": {
+      "monthly": "Månedlig",
+      "annually": "Årlig",
+      "save": "2 måneder gratis"
+    },
+    "plans": [
+      {
+        "id": "starter",
+        "name": "Starter",
+        "description": "Ideelt til små restauranter",
+        "price": {
+          "monthly": 297,
+          "annually": 2970
+        },
+        "commission": "10%",
+        "infrastructure": "~$90/måned",
+        "locations": "1 lokation",
+        "performance": "Standard ydelses-klynge",
+        "featurePrice": "$15/måned pr. ny funktion",
+        "launchFee": "$490 engangs",
+        "features": [
+          "Tilpasset iOS + Android-app",
+          "Webadministrationsdashboard",
+          "Sikker cloud-hosting inkluderet",
+          "Opsætning: $299 (engangs betaling)",
+          "10% gebyr pr. onlinetransaktion",
+          "Nye funktioner: +$15/måned pr. tilføjet funktion"
+        ],
+        "cta": "Kom i gang",
+        "popular": false
+      },
+      {
+        "id": "growth",
+        "name": "Vækst",
+        "description": "Designet til voksende restauranter",
+        "price": {
+          "monthly": 597,
+          "annually": 5970
+        },
+        "commission": "7%",
+        "infrastructure": "~$200/måned",
+        "locations": "Flere lokationer",
+        "performance": "Udvidet ydelses-infrastruktur",
+        "featurePrice": "$5/måned pr. ny funktion",
+        "launchFee": "$890 engangs",
+        "features": [
+          "Alt inkluderet i Starter",
+          "Optimeret infrastruktur for højere trafik",
+          "Avanceret rapportering og promoveringsværktøjer",
+          "Opsætning: $600 (engangs betaling)",
+          "7% gebyr pr. onlinetransaktion",
+          "Nye funktioner: +$5/måned pr. tilføjet funktion"
+        ],
+        "cta": "Start Prøveperiode",
+        "popular": true
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise Pro",
+        "description": "Designet til kæder og brands med høj volumen",
+        "price": {
+          "monthly": 1290,
+          "annually": 12900
+        },
+        "commission": "3%",
+        "infrastructure": "~$422/måned",
+        "locations": "Multi-lokation support",
+        "performance": "Premium multi-AZ infrastruktur",
+        "featurePrice": "Inkluderet",
+        "launchFee": "$1,500 engangs",
+        "features": [
+          "Alt inkluderet i Professional",
+          "Dedikeret og auto-skalerbar infrastruktur",
+          "24/7 prioritets support",
+          "Opsætning: $1,200 (engangs betaling)",
+          "3% gebyr pr. onlinetransaktion",
+          "Nye funktioner: Inkluderet uden ekstra omkostninger"
+        ],
+        "cta": "Kontakt Salg",
+        "popular": false
+      }
+    ],
+    "faq": {
+      "title": "Ofte Stillede Spørgsmål",
+      "items": [
+        {
+          "question": "Hvad betyder 'infrastruktur- og omkostningsdækning'?",
+          "answer": "Vi investerer i dedikeret cloud-infrastruktur til din forretning. Disse beløb repræsenterer vores infrastrukturomkostninger dækket af os - du nyder godt af AWS-ressourcer på virksomhedsniveau uden at skulle styre dem."
+        },
+        {
+          "question": "Hvad er gebyr?",
+          "answer": "Afhængigt af din plan tager vi en lille procentdel af dine samlede behandlede transaktioner. Dette tillader os at tilpasse vores succes med dine."
+        },
+        {
+          "question": "Kan jeg opgradere eller nedgradere når som helst?",
+          "answer": "Ja! Du kan skifte plan når som helst. Ændringer træder i kraft øjeblikkeligt, og vi justerer gebyrer forholdsmæssigt."
+        },
+        {
+          "question": "Er nye funktioner altid opladede?",
+          "answer": "De fleste nye funktioner er inkluderet i Enterprise-planen. Basic og Professional-planer opkræver et tilbagevendende månedligt gebyr for yderligere funktioner udviklet til dine behov."
+        }
+      ]
+    }
+  },
+  "blog": {
+    "section": {
+      "badge": "Blog og Ressourcer",
+      "title": "Seneste Indsigter",
+      "subtitle": "Bliv opdateret med tips, tutorials og industrinyhedsser"
+    },
+    "readMore": "Læs Mere",
+    "readTime": "min læsning",
+    "categories": {
+      "all": "Alle",
+      "tutorials": "Tutorials",
+      "updates": "Produkt Opdateringer",
+      "tips": "Tips & Tricks",
+      "news": "Nyheder"
+    }
+  },
+  "ctaSection": {
+    "title": "Klar til at Transformere Din Forretning?",
+    "description": "Slut dig til tusinder af virksomheder, der allerede bruger Sostentia Desk til at strømline deres operationer og øge produktiviteten.",
+    "getStarted": "Kom i gang",
+    "learnMore": "Lær Mere"
+  },
+  "about": {
+    "hero": {
+      "badge": "Om Os",
+      "title": "Opbygning af Fremtiden for Forretningsledelse",
+      "subtitle": "Vi er på en mission for at styrke virksomheder med intuitive, kraftige værktøjer, der driver vækst og effektivitet."
+    },
+    "story": {
+      "title": "Vores Historie",
+      "content": "Vi mener, at store virksomheder fortjener bedre værktøjer. Sostentia blev født ud fra en simpel men kraftfuld indsigt: teams var ved at miste utallige timer med at navigere mellem fragmenterede platforme, kæmpe med data, der ikke var synkroniseret, og styre operationer på tværs af afbrydt systemer.\n\nSå vi byggede anderledes. Vi skabte en samlet platform, der bringer alt sammen—mobilapp, webdashboard, analyser i realtid og kundeinsight—alt synkroniseret og tilgængeligt fra hvor som helst. Vores mission er at give hver forretning, uanset størrelse, værktøjer på virksomhedsniveau, der gør kompleksitet enkel.\n\nMen teknologi alene er ikke nok. Vi tror på ægte relationer. Derfor er vi forpligtet til person-til-person support, hvilket sikrer, at du aldrig bare er et billetnummer. Vi lykkes, når du lykkes, og vi er her for at støtte hvert skridt på din vækstur.\n\nSiden 2024 har vi været besatt med en ting: at eliminere friktionen mellem dig og dine data, mellem dit team og deres mål. Fordi når dit team har de rigtige værktøjer og den rigtige support, er der intet, du ikke kan opnå."
+    },
+    "values": {
+      "title": "Vores Værdier",
+      "items": [
+        {
+          "title": "Innovation",
+          "description": "Vi presser kontinuerligt grænserne for at levere banebrydende løsninger.",
+          "icon": "lightbulb"
+        },
+        {
+          "title": "Enkelhed",
+          "description": "Komplekse problemer fortjener elegante, enkle løsninger.",
+          "icon": "zap"
+        },
+        {
+          "title": "Sikkerhed",
+          "description": "Din datasikkerhed er vores højeste prioritet, altid.",
+          "icon": "shield"
+        },
+        {
+          "title": "Support",
+          "description": "Vi er her for at hjælpe dig med at få succes hvert eneste skridt.",
+          "icon": "heart"
+        }
+      ]
+    },
+    "team": {
+      "title": "Møde Vores Team",
+      "subtitle": "Passionerede professionelle dedikeret til din succes"
+    }
+  },
+  "support": {
+    "hero": {
+      "badge": "Support",
+      "title": "Vi Er Her for at Hjælpe",
+      "subtitle": "Få den support du har brug for, når du har brug for den"
+    },
+    "options": {
+      "title": "Kom i Kontakt",
+      "items": [
+        {
+          "title": "Email Support",
+          "description": "Få hjælp via email inden for 24 timer",
+          "contact": "support@sostenatiadesk.com",
+          "icon": "mail"
+        },
+        {
+          "title": "Live Chat",
+          "description": "Chat med vores team i realtid",
+          "contact": "Tilgængelig 9 AM - 6 PM EST",
+          "icon": "message-circle"
+        },
+        {
+          "title": "Dokumentation",
+          "description": "Gennemse vores omfattende guides",
+          "contact": "Besøg Hjælp Center",
+          "icon": "book"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Ofte Stillede Spørgsmål",
+      "categories": {
+        "general": "Generelt",
+        "account": "Konto",
+        "billing": "Fakturering",
+        "technical": "Teknisk"
+      }
+    },
+    "form": {
+      "title": "Send os en Besked",
+      "name": "Fuldt Navn",
+      "email": "Email Adresse",
+      "phone": "Telefon Nummer",
+      "subject": "Emne",
+      "message": "Din Besked",
+      "plan": "Interesseret Plan",
+      "planOptions": {
+        "none": "Ikke sikker endnu",
+        "starter": "Starter - $297/måned",
+        "growth": "Vækst - $597/måned",
+        "enterprise": "Enterprise Pro - $1,290/måned"
+      },
+      "submit": "Send Besked",
+      "success": "Besked sendt med succes! Vi vender tilbage til dig snart.",
+      "error": "Fejl ved sending af besked. Prøv igen."
+    }
+  },
+  "register": {
+    "title": "Opret Din Konto",
+    "subtitle": "Start din 14-dages gratis prøveperiode i dag. Intet kreditkort påkrævet.",
+    "form": {
+      "firstName": "Fornavn",
+      "lastName": "Efternavn",
+      "email": "Email Adresse",
+      "company": "Virksomhedsnavn",
+      "password": "Adgangskode",
+      "confirmPassword": "Bekræft Adgangskode",
+      "phone": "Telefon (Valgfrit)",
+      "useCase": "Hvordan vil du bruge Sostentia Desk?",
+      "useCaseOptions": {
+        "projectManagement": "Projektledelse",
+        "customerService": "Kundeservice",
+        "sales": "Salg & CRM",
+        "operations": "Operationer",
+        "other": "Anden"
+      },
+      "terms": "Jeg accepterer Vilkår for Brug og Privatlivspolitik",
+      "submit": "Opret Konto",
+      "submitting": "Opretter Konto...",
+      "success": "Konto oprettet med succes!",
+      "error": "Fejl ved oprettelse af konto. Prøv igen.",
+      "haveAccount": "Har du allerede en konto?",
+      "login": "Log ind"
+    },
+    "validation": {
+      "required": "Dette felt er påkrævet",
+      "email": "Venligst angiv en gyldig email-adresse",
+      "passwordMin": "Adgangskode skal være mindst 8 karakterer",
+      "passwordMatch": "Adgangskoder stemmer ikke overens",
+      "terms": "Du skal acceptere vilkår og betingelser"
+    }
+  },
+  "footer": {
+    "tagline": "Understøttelse af virksomheder med problemfri mobile og webløsninger.",
+    "product": {
+      "title": "Produkt",
+      "links": {
+        "features": "Funktioner",
+        "pricing": "Priser",
+        "security": "Sikkerhed",
+        "roadmap": "Køreplan",
+        "changelog": "Ændringslog"
+      }
+    },
+    "company": {
+      "title": "Virksomhed",
+      "links": {
+        "about": "Om Os",
+        "careers": "Karriere",
+        "blog": "Blog",
+        "press": "Pressepakke",
+        "contact": "Kontakt"
+      }
+    },
+    "resources": {
+      "title": "Ressourcer",
+      "links": {
+        "documentation": "Dokumentation",
+        "api": "API-reference",
+        "support": "Support",
+        "community": "Fællesskab",
+        "status": "Status"
+      }
+    },
+    "legal": {
+      "title": "Juridisk",
+      "links": {
+        "privacy": "Privatlivspolitik",
+        "terms": "Vilkår for Brug",
+        "cookies": "Cookie Politik",
+        "licenses": "Licenser"
+      }
+    },
+    "newsletter": {
+      "title": "Bliv Opdateret",
+      "description": "Få de seneste opdateringer, tips og indsigt leveret til dit indbakke.",
+      "placeholder": "Angiv din email",
+      "button": "Abonnér",
+      "success": "Tak for at abonnere!",
+      "error": "Venligst angiv en gyldig email"
+    },
+    "social": {
+      "title": "Følg Os"
+    },
+    "copyright": "© 2026 Sostentia Desk. Alle rettigheder forbeholdt."
+  },
+  "common": {
+    "loading": "Indlæser...",
+    "error": "En fejl opstod",
+    "retry": "Prøv igen",
+    "close": "Luk",
+    "save": "Gem",
+    "cancel": "Annuller",
+    "delete": "Slet",
+    "edit": "Rediger",
+    "search": "Søg...",
+    "filter": "Filtrer",
+    "sort": "Sorter",
+    "noResults": "Ingen resultater fundet",
+    "viewAll": "Se Alt",
+    "learnMore": "Lær Mere",
+    "getStarted": "Kom i gang",
+    "contactUs": "Kontakt Os",
+    "backToHome": "Tilbage til Hjem"
+  }
+}

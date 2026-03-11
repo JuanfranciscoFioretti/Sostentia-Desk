@@ -21,7 +21,7 @@ export function GradientBlob({
     blue: 'from-blue-500/30 to-cyan-500/30',
     cyan: 'from-cyan-500/30 to-teal-500/30',
     pink: 'from-pink-500/30 to-rose-500/30',
-    green: 'from-primary/30 to-green-500/30',
+    green: 'from-primary/20 to-green-700/20',
   };
 
   const sizes = {

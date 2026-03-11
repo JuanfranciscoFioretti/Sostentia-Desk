@@ -1,14 +1,15 @@
 'use client';
 
+import { use } from 'react';
 import { SupportHero } from '@/components/sections/SupportHero';
 import { SupportForm } from '@/components/sections/SupportForm';
 
 export default function SupportPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params.locale;
+  const { locale } = use(params);
   
   return (
     <>

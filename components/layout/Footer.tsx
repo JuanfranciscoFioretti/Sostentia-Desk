@@ -1,9 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Instagram, Globe } from 'lucide-react';
+import { useTheme } from '@/components/theme/ThemeProvider';
+import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 
@@ -13,6 +16,7 @@ interface FooterProps {
 
 export function Footer({ locale }: FooterProps) {
   const t = useTranslations('footer');
+  const { theme } = useTheme();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -60,10 +64,9 @@ export function Footer({ locale }: FooterProps) {
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:hello@sostenatiadesk.com', label: 'Email' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/juan-francisco-fioretti-full-stack-developer/?locale=es', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/sostentia/', label: 'Instagram' },
+    { icon: Globe, href: 'https://sostentia.com/', label: 'Website' },
   ];
 
   return (
@@ -74,13 +77,26 @@ export function Footer({ locale }: FooterProps) {
           {/* Brand & Newsletter */}
           <div className="lg:col-span-2">
             <Link
-              href={`/${locale}`}
+              href="https://sostentia.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center space-x-2 group mb-4"
             >
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
-                <span className="text-2xl font-bold bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
-                  S
-                </span>
+              <div 
+                className="flex items-center justify-center w-14 h-14 rounded-lg transition-all duration-300"
+                style={{
+                  background: theme === 'dark'
+                    ? 'radial-gradient(circle, rgba(59,130,246,0.5) 0%, rgba(59,130,246,0.2) 70%, transparent 100%)'
+                    : 'radial-gradient(circle, rgba(209,213,219,0.9) 0%, rgba(209,213,219,0.4) 70%, transparent 100%)'
+                }}
+              >
+                <Image
+                  src="/S-white.png"
+                  alt="Sostentia Desk Logo"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12"
+                />
               </div>
               <span className="text-xl font-bold text-foreground">
                 Sostentia Desk
@@ -196,7 +212,16 @@ export function Footer({ locale }: FooterProps) {
         {/* Bottom Section */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            {t('copyright')}
+            © 2026{' '}
+            <a
+              href="https://sostentia.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              Sostentia Desk
+            </a>
+            {locale === 'es' ? '. Todos los derechos reservados.' : '. All rights reserved.'}
           </p>
 
           {/* Social Links */}
