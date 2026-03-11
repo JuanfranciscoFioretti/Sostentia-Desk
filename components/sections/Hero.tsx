@@ -22,7 +22,7 @@ export function Hero({ locale }: HeroProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-56 sm:pt-48 md:pt-32 pb-56 sm:pb-48 md:pb-32">
       <SpaceBackground animated />
       <GradientBlob color="purple" size="xl" className="top-10 left-10" delay={0} />
       <GradientBlob color="blue" size="lg" className="bottom-20 right-10" delay={2} />

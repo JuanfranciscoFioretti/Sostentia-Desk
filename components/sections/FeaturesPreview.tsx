@@ -30,7 +30,7 @@ export function FeaturesPreview() {
   features = features.filter(f => f.id !== 'real-time-chat');
 
   return (
-    <Section background="muted" className="pt-20">
+    <Section background="muted" className="pt-32 sm:pt-24 md:pt-20">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
