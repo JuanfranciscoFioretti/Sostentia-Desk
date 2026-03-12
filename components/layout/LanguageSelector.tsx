@@ -42,7 +42,12 @@ export function LanguageSelector() {
   }, [isOpen]);
 
   const handleLocaleChange = (newLocale: string) => {
-    router.push(pathname, { locale: newLocale });
+    // If we're on a blog post page, go to the blog page instead of trying to use the same slug
+    if (pathname.includes('/blog/')) {
+      router.push('/blog', { locale: newLocale });
+    } else {
+      router.push(pathname, { locale: newLocale });
+    }
     setIsOpen(false);
   };
 
@@ -62,7 +67,7 @@ export function LanguageSelector() {
         aria-label="Change language"
       >
         <Globe className="h-4 w-4 text-primary" />
-        <span className="text-sm font-medium">
+        <span className={locale === 'en' ? 'text-[10px] font-bold leading-none' : 'text-sm'}>
           {languages[locale as keyof typeof languages].flag}
         </span>
       </button>
@@ -95,7 +100,7 @@ export function LanguageSelector() {
                       : 'text-foreground hover:bg-primary/10'
                   }`}
                 >
-                  <span className={loc === 'en' ? 'text-xs font-bold' : 'text-lg'}>{languages[loc].flag}</span>
+                  <span className={loc === 'en' ? 'text-[10px] font-bold leading-none' : 'text-sm'}>{languages[loc].flag}</span>
                   <span className="flex-1 text-left">{languages[loc].name}</span>
                   {locale === loc && (
                     <Check className="h-4 w-4 text-primary flex-shrink-0" />

@@ -5,6 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { MobileFrame } from '@/components/ui/MobileFrame';
 import { formatDate } from '@/lib/utils';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import type { BlogPost } from '@/lib/blog';
@@ -18,9 +19,9 @@ export async function generateStaticParams() {
 export default async function BlogPostPage({
   params,
 }: {
-  params: { locale: string; slug: string };
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { locale, slug } = params;
+  const { locale, slug } = await params;
   const headersList = await headers();
   const protocol = headersList.get('x-forwarded-proto') || 'http';
   const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost:3000';
@@ -46,8 +47,8 @@ export default async function BlogPostPage({
     <article className="pt-32 pb-24">
       <Container size="md">
         <Link href={`/${locale}/blog`}>
-          <Button variant="ghost" size="sm" className="mb-8">
-            <ArrowLeft className="mr-2 h-4 w-4" />
+          <Button variant="ghost" size="sm" className="mb-8 group transition-all duration-300 hover:bg-primary/10">
+            <ArrowLeft className="mr-2 h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
             Back to Blog
           </Button>
         </Link>
@@ -68,13 +69,34 @@ export default async function BlogPostPage({
           </div>
         </header>
 
-        {post.image && (
-          <div className="aspect-video bg-muted rounded-2xl mb-12 flex items-center justify-center">
-            <span className="text-muted-foreground">Featured Image</span>
+        {post.displayMobileFrame ? (
+          <div className="flex justify-center mb-12">
+            <MobileFrame>
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            </MobileFrame>
           </div>
-        )}
+        ) : post.image ? (
+          <img
+            src={post.image}
+            alt={post.title}
+            className="aspect-video object-cover rounded-2xl mb-12 w-full"
+          />
+        ) : null}
 
-        <div className="prose prose-lg dark:prose-invert max-w-none">
+        <div className="prose prose-xl dark:prose-invert max-w-none 
+          prose-headings:mt-10 prose-headings:mb-6 prose-headings:font-bold
+          prose-h2:text-3xl prose-h3:text-2xl
+          prose-p:leading-8 prose-p:text-base prose-p:mb-6
+          prose-li:leading-7 prose-li:text-base prose-li:my-3
+          prose-ul:my-6 prose-ol:my-6
+          prose-strong:font-bold prose-strong:text-foreground
+          prose-a:text-primary prose-a:underline hover:prose-a:text-primary/80
+          prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-lg
+          space-y-2">
           <MDXRemote source={post.content} />
         </div>
       </Container>

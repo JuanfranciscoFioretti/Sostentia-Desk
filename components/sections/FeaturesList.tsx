@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield, Gift, MessageCircle } from 'lucide-react';
+import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield, Gift, MessageCircle, Eye } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { MobileFrame } from '@/components/ui/MobileFrame';
@@ -17,6 +17,7 @@ const iconMap = {
   shield: Shield,
   gift: Gift,
   'message-circle': MessageCircle,
+  eye: Eye,
 };
 
 export function FeaturesList() {
@@ -145,6 +146,18 @@ export function FeaturesList() {
                     </div>
                   ) : index === 5 ? (
                     <div className="flex items-center justify-center">
+                      <MobileFrame>
+                        <Image
+                          src="/images/screenshots/high-contrast.webp"
+                          alt="Accessibility high-contrast screenshot"
+                          fill
+                          className="object-cover"
+                          priority
+                        />
+                      </MobileFrame>
+                    </div>
+                  ) : index === 6 ? (
+                    <div className="flex items-center justify-center">
                       <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
                           src="/images/screenshots/Stats-Screen.webp"
@@ -157,7 +170,7 @@ export function FeaturesList() {
                         />
                       </div>
                     </div>
-                  ) : index === 6 ? (
+                  ) : index === 7 ? (
                     <div className="flex items-center justify-center">
                       <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image

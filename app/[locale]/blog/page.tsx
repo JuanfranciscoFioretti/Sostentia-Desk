@@ -3,15 +3,16 @@ import { headers } from 'next/headers';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Container } from '@/components/ui/Container';
+import { MobileFrame } from '@/components/ui/MobileFrame';
 import { formatDate } from '@/lib/utils';
 import type { BlogPost } from '@/lib/blog';
 
 export default async function BlogPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = params;
+  const { locale } = await params;
   const headersList = await headers();
   const protocol = headersList.get('x-forwarded-proto') || 'http';
   const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost:3000';
@@ -48,12 +49,26 @@ export default async function BlogPage({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
               <Link key={post.slug} href={`/${locale}/blog/${post.slug}`}>
-                <Card className="h-full flex flex-col">
-                  {post.image && (
-                    <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-muted-foreground">Image</span>
+                <Card className="h-full flex flex-col overflow-hidden">
+                  {post.displayMobileFrame ? (
+                    <div className="aspect-video w-full flex items-start justify-center bg-secondary rounded-lg mb-4 overflow-hidden">
+                      <div className="scale-75 origin-top">
+                        <MobileFrame>
+                          <img
+                            src="/images/screenshots/App-Screen-1.webp"
+                            alt="App Screen"
+                            className="w-full h-full object-cover"
+                          />
+                        </MobileFrame>
+                      </div>
                     </div>
-                  )}
+                  ) : post.image ? (
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="aspect-video object-cover rounded-lg mb-4 w-full"
+                    />
+                  ) : null}
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-3">
                       {post.tags.map((tag) => (

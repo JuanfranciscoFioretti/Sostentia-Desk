@@ -1,6 +1,7 @@
 'use client';
 
 import { NextIntlClientProvider } from 'next-intl';
+import { timeZone } from '@/i18n/config';
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -14,7 +15,7 @@ interface LayoutClientProps {
 export function LayoutClient({ children, locale, messages }: LayoutClientProps) {
   return (
     <ThemeProvider>
-      <NextIntlClientProvider messages={messages} locale={locale}>
+      <NextIntlClientProvider messages={messages} locale={locale} timeZone={timeZone}>
         <div className="relative w-full flex flex-col">
           <Header locale={locale} />
           <main className="w-full flex-1">

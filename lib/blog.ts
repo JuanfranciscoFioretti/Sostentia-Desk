@@ -19,6 +19,7 @@ export interface BlogPost {
   image?: string;
   tags: string[];
   content: string;
+  displayMobileFrame?: boolean;
 }
 
 export function getPostBySlug(slug: string, locale: string): BlogPost | null {
@@ -36,6 +37,7 @@ export function getPostBySlug(slug: string, locale: string): BlogPost | null {
       image: data.image,
       tags: data.tags || [],
       content,
+      displayMobileFrame: data.displayMobileFrame || false,
     };
   } catch {
     return null;

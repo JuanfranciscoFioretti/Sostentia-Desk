@@ -66,6 +66,13 @@
         "items": ["Opret Medlemmer", "Tildel Roller", "Begrænset Adgang"]
       },
       {
+        "id": "accessibility",
+        "title": "Tilgængelighed",
+        "description": "Inklusiv design med omfattende tilgængelighedsfunktioner. Vores mobilapp inkluderer tema med høj kontrast, TalkBack-optimering og detaljerede etiketter for en tilgængelig oplevelse for alle brugere.",
+        "icon": "eye",
+        "items": ["Tema med Høj Kontrast", "TalkBack-optimeret", "Detaljerede Etiketter"]
+      },
+      {
         "id": "advanced-analytics",
         "title": "Avanceret Analytics",
         "description": "Få dybgående indsigt i din forretning med tilpassede rapporter, diagrammer og KPI-sporing, der hjælper dig med at vokse hurtigere.",

@@ -135,7 +135,7 @@ export function Hero({ locale }: HeroProps) {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="absolute top-4 -right-8 glass rounded-2xl p-4 shadow-xl z-10"
+                className="absolute top-4 -right-5 glass rounded-2xl p-4 shadow-xl z-10"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />

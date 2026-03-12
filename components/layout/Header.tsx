@@ -67,8 +67,8 @@ export function Header({ locale }: HeaderProps) {
             className="flex items-center justify-center w-14 h-14 rounded-lg transition-all duration-300 group-hover:scale-110"
             style={{
               background: theme === 'dark'
-                ? 'radial-gradient(circle, rgba(59,130,246,0.5) 0%, rgba(59,130,246,0.2) 70%, transparent 100%)'
-                : 'radial-gradient(circle, rgba(209,213,219,0.9) 0%, rgba(209,213,219,0.4) 70%, transparent 100%)'
+                ? 'radial-gradient(circle, rgba(34,197,94,0.5) 0%, rgba(34,197,94,0.2) 70%, transparent 100%)'
+                : 'radial-gradient(circle, rgba(34,197,94,0.8) 0%, rgba(34,197,94,0.5) 70%, transparent 100%)'
             }}
           >
             <Image

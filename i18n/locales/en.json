@@ -66,6 +66,13 @@
           ,"items": ["Create Members", "Assign Roles", "Limited Access"]
       },
       {
+        "id": "accessibility",
+        "title": "Accessibility",
+        "description": "Inclusive design with comprehensive accessibility features. Our mobile app includes high-contrast theme, TalkBack optimization, and detailed labels for an accessible experience for all users.",
+        "icon": "eye"
+          ,"items": ["High-Contrast Theme", "TalkBack Optimized", "Detailed Labels"]
+      },
+      {
         "id": "advanced-analytics",
         "title": "Advanced Analytics",
         "description": "Get deep insights into your business with customizable reports, charts, and KPI tracking that help you grow faster.",
