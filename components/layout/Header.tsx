@@ -190,12 +190,12 @@ export function Header({ locale }: HeaderProps) {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="group px-8 py-4 rounded-lg text-2xl font-semibold text-foreground transition-all duration-300 flex items-center gap-2"
+                  className="group relative px-8 py-4 rounded-lg text-4xl font-semibold text-foreground transition-all duration-300 flex items-center justify-center"
                 >
-                  <span className="group-hover:-translate-x-3 transition-transform duration-300">
+                  <span className="group-hover:-translate-x-2 transition-transform duration-300">
                     {item.name}
                   </span>
-                  <ArrowRight className="w-6 h-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                  <ArrowRight className="absolute w-6 h-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-8 transition-all duration-300 right-8" />
                 </Link>
               ))}
 

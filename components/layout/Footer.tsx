@@ -64,7 +64,7 @@ export function Footer({ locale }: FooterProps) {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/juan-francisco-fioretti-full-stack-developer/?locale=es', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/sostentia/posts/?feedView=all', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://www.instagram.com/sostentia/', label: 'Instagram' },
     { icon: Globe, href: 'https://sostentia.com/', label: 'Website' },
   ];
