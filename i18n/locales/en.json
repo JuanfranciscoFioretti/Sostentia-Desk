@@ -116,23 +116,23 @@
       {
         "id": "starter",
         "name": "Starter",
-        "description": "Ideal for small restaurants",
+        "description": "For restaurants doing under 800 orders/month",
         "price": {
-          "monthly": 297,
-          "annually": 2970
+          "monthly": 199,
+          "annually": 1990
         },
-        "commission": "10%",
+        "commission": "12%",
         "infrastructure": "~$90/month",
         "locations": "1 location",
         "performance": "Standard performance cluster",
         "featurePrice": "$15/month per new feature",
-        "launchFee": "$490 one-time",
+        "launchFee": "$399 one-time",
         "features": [
           "Customized iOS + Android App",
           "Web Admin Dashboard",
           "Secure Cloud Hosting Included",
-          "Setup: $299 (one-time payment)",
-          "10% commission per online transaction",
+          "Setup: $399 one-time",
+          "12% commission per online transaction",
           "New features: +$15/month per feature added"
         ],
         "cta": "Get Started",
@@ -141,7 +141,7 @@
       {
         "id": "growth",
         "name": "Growth",
-        "description": "Designed for scaling restaurants",
+        "description": "For restaurants doing 800-3000 orders/month",
         "price": {
           "monthly": 597,
           "annually": 5970
@@ -166,7 +166,7 @@
       {
         "id": "enterprise",
         "name": "Enterprise Pro",
-        "description": "Designed for chains & high-volume brands",
+        "description": "For chains & high-volume brands",
         "price": {
           "monthly": 1290,
           "annually": 12900

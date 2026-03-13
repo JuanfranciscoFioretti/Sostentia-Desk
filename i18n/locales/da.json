@@ -116,23 +116,23 @@
       {
         "id": "starter",
         "name": "Starter",
-        "description": "Ideelt til små restauranter",
+        "description": "For restauranter med under 800 bestillinger/måned",
         "price": {
-          "monthly": 297,
-          "annually": 2970
+          "monthly": 199,
+          "annually": 1990
         },
-        "commission": "10%",
+        "commission": "12%",
         "infrastructure": "~$90/måned",
         "locations": "1 lokation",
         "performance": "Standard ydelses-klynge",
         "featurePrice": "$15/måned pr. ny funktion",
-        "launchFee": "$490 engangs",
+        "launchFee": "$399 engangs",
         "features": [
           "Tilpasset iOS + Android-app",
           "Webadministrationsdashboard",
           "Sikker cloud-hosting inkluderet",
-          "Opsætning: $299 (engangs betaling)",
-          "10% gebyr pr. onlinetransaktion",
+          "Opsætning: $399 engangs",
+          "12% gebyr pr. onlinetransaktion",
           "Nye funktioner: +$15/måned pr. tilføjet funktion"
         ],
         "cta": "Kom i gang",
@@ -141,7 +141,7 @@
       {
         "id": "growth",
         "name": "Vækst",
-        "description": "Designet til voksende restauranter",
+        "description": "For restauranter med 800-3000 bestillinger/måned",
         "price": {
           "monthly": 597,
           "annually": 5970
@@ -166,7 +166,7 @@
       {
         "id": "enterprise",
         "name": "Enterprise Pro",
-        "description": "Designet til kæder og brands med høj volumen",
+        "description": "For kæder og brands med høj volumen",
         "price": {
           "monthly": 1290,
           "annually": 12900

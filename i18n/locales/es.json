@@ -116,23 +116,23 @@
       {
         "id": "starter",
         "name": "Iniciador",
-        "description": "Ideal para restaurantes pequeños",
+        "description": "Para restaurantes con menos de 800 pedidos/mes",
         "price": {
-          "monthly": 297,
-          "annually": 2970
+          "monthly": 199,
+          "annually": 1990
         },
-        "commission": "10%",
+        "commission": "12%",
         "infrastructure": "~$90/mes",
         "locations": "1 ubicación",
         "performance": "Clúster de rendimiento estándar",
         "featurePrice": "$15/mes por característica nueva",
-        "launchFee": "$490 único",
+        "launchFee": "$399 único",
         "features": [
           "App iOS + Android personalizada",
           "Dashboard administrativo web",
           "Hosting seguro en la nube incluido",
-          "Setup: $299 (pago único)",
-          "Comisión: 10% por transacción online",
+          "Setup: $399 one-time",
+          "Comisión: 12% por transacción online",
           "Nuevas features: +$15 / mes por cada feature agregada"
         ],
         "cta": "Comenzar",
@@ -141,7 +141,7 @@
       {
         "id": "growth",
         "name": "Crecimiento",
-        "description": "Diseñado para restaurantes en crecimiento",
+        "description": "Para restaurantes con 800-3000 pedidos/mes",
         "price": {
           "monthly": 597,
           "annually": 5970
@@ -166,7 +166,7 @@
       {
         "id": "enterprise",
         "name": "Empresarial Pro",
-        "description": "Diseñado para cadenas y marcas de alto volumen",
+        "description": "Para cadenas y marcas de alto volumen",
         "price": {
           "monthly": 1290,
           "annually": 12900
