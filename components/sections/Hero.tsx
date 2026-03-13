@@ -167,7 +167,7 @@ export function Hero({ locale }: HeroProps) {
 
       <Modal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)}>
         <VideoPlayer
-          url="/videos/demo.mp4"
+          url="https://www.youtube.com/watch?v=gCPJxtBkqas"
           controls={true}
           autoplay={true}
         />
