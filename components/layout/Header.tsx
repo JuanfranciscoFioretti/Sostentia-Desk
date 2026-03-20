@@ -111,7 +111,7 @@ export function Header({ locale }: HeaderProps) {
             {mounted && (
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-lg hover:bg-primary/10 transition-colors duration-300"
+                className="p-2 rounded-lg hover:bg-primary/10 transition-colors duration-300 cursor-pointer"
                 aria-label="Toggle theme"
                 suppressHydrationWarning
               >
@@ -136,7 +136,7 @@ export function Header({ locale }: HeaderProps) {
             {mounted && (
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-lg hover:bg-primary/10 transition-colors duration-300 md:hidden"
+                className="p-2 rounded-lg hover:bg-primary/10 transition-colors duration-300 md:hidden cursor-pointer"
                 aria-label="Toggle theme"
                 suppressHydrationWarning
               >

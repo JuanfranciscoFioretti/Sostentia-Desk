@@ -34,7 +34,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       primary:
         'bg-primary hover:bg-primary/90 shadow-glow hover:shadow-glow-lg text-[rgb(var(--foreground))]',
       secondary:
-        'glass hover:bg-primary/10 text-foreground',
+        'glass hover:bg-primary/20 hover:text-primary hover:border-primary border-2 border-transparent text-foreground transition-colors',
       outline:
         'border-2 border-primary text-primary hover:bg-primary hover:text-white',
       ghost:

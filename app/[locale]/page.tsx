@@ -1,7 +1,7 @@
 'use client';
 
 import { use } from 'react';
-import { Hero } from '@/components/sections/Hero';
+import { Hero2 } from '@/components/sections/Hero2';
 import { FeaturesPreview } from '@/components/sections/FeaturesPreview';
 import { CTASection } from '@/components/sections/CTASection';
 
@@ -14,7 +14,7 @@ export default function HomePage({
   
   return (
     <>
-      <Hero locale={locale} />
+      <Hero2 locale={locale} />
       <FeaturesPreview />
       <CTASection locale={locale} />
     </>

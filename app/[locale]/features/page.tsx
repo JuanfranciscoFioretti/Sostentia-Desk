@@ -3,7 +3,6 @@
 import { use } from 'react';
 import { FeaturesHero } from '@/components/sections/FeaturesHero';
 import { FeaturesList } from '@/components/sections/FeaturesList';
-import { CTASection } from '@/components/sections/CTASection';
 
 export default function FeaturesPage({
   params,
@@ -16,7 +15,6 @@ export default function FeaturesPage({
     <>
       <FeaturesHero />
       <FeaturesList />
-      <CTASection locale={locale} />
     </>
   );
 }

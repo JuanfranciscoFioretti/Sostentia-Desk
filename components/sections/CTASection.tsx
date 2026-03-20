@@ -49,6 +49,7 @@ export function CTASection({ locale }: CTASectionProps) {
             <Button
               variant="secondary"
               size="lg"
+              className="hover:bg-primary/20 hover:text-primary transition-colors"
               asChild
             >
               <Link href={`/${locale}/features`}>

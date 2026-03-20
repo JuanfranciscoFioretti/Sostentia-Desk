@@ -63,7 +63,7 @@ export function LanguageSelector() {
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         suppressHydrationWarning
-        className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-primary/10 transition-all duration-300"
+        className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-primary/10 transition-all duration-300 cursor-pointer"
         aria-label="Change language"
       >
         <Globe className="h-4 w-4 text-primary" />
