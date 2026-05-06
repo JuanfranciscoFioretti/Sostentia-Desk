@@ -31,6 +31,13 @@
     },
     "list": [
       {
+        "id": "web-app-access",
+        "title": "Web App Access",
+        "description": "Access your business from any browser with our full-featured web application. Shop, book, and navigate with ease from desktop or tablet.",
+        "icon": "monitor",
+        "items": ["Shop & Purchase", "Easy Booking", "Browse & Navigate"]
+      },
+      {
         "id": "mobile-app",
         "title": "Native Mobile App",
         "description": "Built with React Native for seamless iOS and Android experience. Access your business data anytime, anywhere with our lightning-fast mobile application.",

@@ -31,6 +31,13 @@
     },
     "list": [
       {
+        "id": "web-app-access",
+        "title": "Webappadgang",
+        "description": "Få adgang til din virksomhed fra enhver browser med vores fuldfeatured webapplikation. Shop, book og naviger med lethed fra dit skrivebord eller tablet.",
+        "icon": "monitor",
+        "items": ["Shop & Køb", "Nem Booking", "Browse & Naviger"]
+      },
+      {
         "id": "mobile-app",
         "title": "Indfødt Mobilapp",
         "description": "Bygget med React Native for en problemfri iOS- og Android-oplevelse. Få adgang til dine forretningsdata når som helst, hvor som helst med vores ultrafast mobilapplikation.",

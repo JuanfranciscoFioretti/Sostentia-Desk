@@ -31,6 +31,13 @@
     },
     "list": [
       {
+        "id": "web-app-access",
+        "title": "Acceso a la App Web",
+        "description": "Accede a tu negocio desde cualquier navegador con nuestra aplicación web completa. Compra, reserva y navega fácilmente desde tu escritorio o tablet.",
+        "icon": "monitor",
+        "items": ["Comprar", "Reservas fáciles", "Explora y navega"]
+      },
+      {
         "id": "mobile-app",
         "title": "Aplicación Móvil Nativa",
         "description": "Construida con React Native para una experiencia perfecta en iOS y Android. Accede a los datos de tu negocio en cualquier momento y lugar con nuestra aplicación móvil ultrarrápida.",

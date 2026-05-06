@@ -80,6 +80,20 @@ export function FeaturesList() {
                 <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
                   {index === 0 ? (
                     <div className="flex items-center justify-center">
+                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                        <Image
+                          src="/images/screenshots/Web-App-View.webp"
+                          alt="Web app access screenshot"
+                          width={900}
+                          height={500}
+                          className="object-cover w-full h-full"
+                          style={{ display: 'block' }}
+                          priority
+                        />
+                      </div>
+                    </div>
+                  ) : index === 1 ? (
+                    <div className="flex items-center justify-center">
                       <MobileFrame>
                         <Image
                           src="/images/screenshots/App-Screen-1.webp"
@@ -90,7 +104,7 @@ export function FeaturesList() {
                         />
                       </MobileFrame>
                     </div>
-                  ) : index === 1 ? (
+                  ) : index === 2 ? (
                     <div className="flex items-center justify-center">
                       <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
@@ -104,7 +118,7 @@ export function FeaturesList() {
                         />
                       </div>
                     </div>
-                  ) : index === 2 ? (
+                  ) : index === 3 ? (
                     <div className="flex items-center justify-center">
                       <MobileFrame>
                         <Image
@@ -116,7 +130,7 @@ export function FeaturesList() {
                         />
                       </MobileFrame>
                     </div>
-                  ) : index === 3 ? (
+                  ) : index === 4 ? (
                     <div className="flex items-center justify-center">
                       <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
@@ -130,7 +144,7 @@ export function FeaturesList() {
                         />
                       </div>
                     </div>
-                  ) : index === 4 ? (
+                  ) : index === 5 ? (
                     <div className="flex items-center justify-center">
                       <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
@@ -144,7 +158,7 @@ export function FeaturesList() {
                         />
                       </div>
                     </div>
-                  ) : index === 5 ? (
+                  ) : index === 6 ? (
                     <div className="flex items-center justify-center">
                       <MobileFrame>
                         <Image
@@ -156,7 +170,7 @@ export function FeaturesList() {
                         />
                       </MobileFrame>
                     </div>
-                  ) : index === 6 ? (
+                  ) : index === 7 ? (
                     <div className="flex items-center justify-center">
                       <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
@@ -170,7 +184,7 @@ export function FeaturesList() {
                         />
                       </div>
                     </div>
-                  ) : index === 7 ? (
+                  ) : index === 8 ? (
                     <div className="flex items-center justify-center">
                       <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
