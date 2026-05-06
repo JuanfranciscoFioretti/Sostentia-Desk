@@ -92,6 +92,20 @@
         "description": "Chat integrado en tiempo real para comunicarte directamente con tus clientes. Proporciona soporte instantáneo y construye relaciones más fuertes.",
         "icon": "message-circle"
           ,"items": ["Respuesta instantánea", "Soporte 24/7", "Satisfacción del cliente"]
+      },
+      {
+        "id": "booking-management",
+        "title": "Sistema Inteligente de Reservas",
+        "description": "Optimiza la gestión de citas y reservaciones con programación automatizada, gestión de disponibilidad y confirmaciones instantáneas. Perfecto para administrar reservas de clientes de manera eficiente.",
+        "icon": "calendar",
+        "items": ["Administrar Disponibilidad", "Programación Fácil", "Confirmaciones Automáticas"]
+      },
+      {
+        "id": "news-events",
+        "title": "Gestión de Noticias y Eventos",
+        "description": "Crea y promociona eventos, envía anuncios dirigidos y mantén a tus clientes informados con herramientas integradas de gestión de noticias y eventos.",
+        "icon": "megaphone",
+        "items": ["Crear Eventos", "Enviar Anuncios", "Aumentar Engagement"]
       }
     ]
   },

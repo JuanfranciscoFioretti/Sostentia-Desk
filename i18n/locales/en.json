@@ -92,6 +92,20 @@
         "description": "Integrated real-time chat to communicate directly with your customers. Provide instant support and build stronger relationships.",
         "icon": "message-circle"
           ,"items": ["Instant Response", "24/7 Support", "Customer Satisfaction"]
+      },
+      {
+        "id": "booking-management",
+        "title": "Smart Booking System",
+        "description": "Streamline appointment and reservation management with automated scheduling, availability management, and instant confirmations. Perfect for managing customer bookings efficiently.",
+        "icon": "calendar"
+          ,"items": ["Manage Availability", "Easy Scheduling", "Auto Confirmations"]
+      },
+      {
+        "id": "news-events",
+        "title": "News & Events Management",
+        "description": "Create and promote events, send targeted announcements, and keep your customers informed with integrated news and event management tools.",
+        "icon": "megaphone"
+          ,"items": ["Create Events", "Send Announcements", "Boost Engagement"]
       }
     ]
   },

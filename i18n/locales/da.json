@@ -92,6 +92,20 @@
         "description": "Integreret realtidschat for at kommunikere direkte med dine kunder. Yd øjeblikkelig support og opbyg stærkere relationer.",
         "icon": "message-circle",
         "items": ["Øjeblikkelig Svar", "24/7 Support", "Kundetilfredshed"]
+      },
+      {
+        "id": "booking-management",
+        "title": "Intelligent Bookingsystem",
+        "description": "Strømlin administrationen af aftaler og reservationer med automatiseret planlægning, tilgængelighedsstyring og øjeblikkelig bekræftelse. Perfekt til effektiv håndtering af kundbookinger.",
+        "icon": "calendar",
+        "items": ["Administrer Tilgængelighed", "Nem Planlægning", "Automatiske Bekræftelser"]
+      },
+      {
+        "id": "news-events",
+        "title": "Nyheds- og Eventadministration",
+        "description": "Opret og promover begivenheder, send målrettede meddelelser og hold dine kunder informeret med integrerede nyheds- og eventadministrationsværktøjer.",
+        "icon": "megaphone",
+        "items": ["Opret Begivenheder", "Send Meddelelser", "Øg Engagement"]
       }
     ]
   },

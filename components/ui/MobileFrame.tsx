@@ -4,7 +4,7 @@ export const MobileFrame = forwardRef<HTMLDivElement, { children: React.ReactNod
   ({ children, className = '' }, ref) => (
     <div
       ref={ref}
-      className={`relative w-[260px] h-[540px] rounded-[2.5rem] border-4 border-neutral-200 dark:border-neutral-700 bg-neutral-900 shadow-2xl overflow-hidden flex items-center justify-center ${className}`}
+      className={`relative w-[260px] h-[540px] rounded-[2.5rem] border-4 border-neutral-600 bg-neutral-900 shadow-2xl overflow-hidden flex items-center justify-center ${className}`}
       style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.25)' }}
     >
       {/* Top notch */}

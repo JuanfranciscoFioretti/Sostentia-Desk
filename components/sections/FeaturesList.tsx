@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield, Gift, MessageCircle, Eye } from 'lucide-react';
+import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield, Gift, MessageCircle, Eye, Calendar, Megaphone } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { MobileFrame } from '@/components/ui/MobileFrame';
@@ -18,6 +18,8 @@ const iconMap = {
   gift: Gift,
   'message-circle': MessageCircle,
   eye: Eye,
+  calendar: Calendar,
+  megaphone: Megaphone,
 };
 
 export function FeaturesList() {
@@ -80,12 +82,12 @@ export function FeaturesList() {
                 <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
                   {index === 0 ? (
                     <div className="flex items-center justify-center">
-                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                      <div className="relative border-4 border-neutral-600 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
-                          src="/images/screenshots/Web-App-View.webp"
+                          src="/images/screenshots/Web-App-Vieww (1).webp"
                           alt="Web app access screenshot"
-                          width={900}
-                          height={500}
+                          width={950}
+                          height={695}
                           className="object-cover w-full h-full"
                           style={{ display: 'block' }}
                           priority
@@ -106,7 +108,7 @@ export function FeaturesList() {
                     </div>
                   ) : index === 2 ? (
                     <div className="flex items-center justify-center">
-                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                      <div className="relative border-4 border-neutral-600 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
                           src="/images/screenshots/Screenshot11.webp"
                           alt="Web dashboard screenshot"
@@ -132,7 +134,7 @@ export function FeaturesList() {
                     </div>
                   ) : index === 4 ? (
                     <div className="flex items-center justify-center">
-                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                      <div className="relative border-4 border-neutral-600 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
                           src="/images/screenshots/orders2.webp"
                           alt="Orders screen screenshot"
@@ -146,7 +148,7 @@ export function FeaturesList() {
                     </div>
                   ) : index === 5 ? (
                     <div className="flex items-center justify-center">
-                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                      <div className="relative border-4 border-neutral-600 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
                           src="/images/screenshots/users2.webp"
                           alt="Users screen screenshot"
@@ -172,7 +174,7 @@ export function FeaturesList() {
                     </div>
                   ) : index === 7 ? (
                     <div className="flex items-center justify-center">
-                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                      <div className="relative border-4 border-neutral-600 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
                           src="/images/screenshots/Stats-Screen.webp"
                           alt="Stats screen screenshot"
@@ -186,7 +188,7 @@ export function FeaturesList() {
                     </div>
                   ) : index === 8 ? (
                     <div className="flex items-center justify-center">
-                      <div className="relative border-4 border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
+                      <div className="relative border-4 border-neutral-600 rounded-2xl shadow-2xl overflow-hidden" style={{ width: '100%', maxWidth: '900px' }}>
                         <Image
                           src="/images/screenshots/Real-Time-Chat.webp"
                           alt="Real-time chat screenshot"
