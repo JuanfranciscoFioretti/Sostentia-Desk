@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield, Gift, Eye, Calendar, Megaphone } from 'lucide-react';
+import { Smartphone, Monitor, RefreshCw, Users, BarChart, Shield, Gift, Eye, Calendar, Megaphone, Palette } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
@@ -19,6 +19,7 @@ const iconMap = {
   eye: Eye,
   calendar: Calendar,
   megaphone: Megaphone,
+  palette: Palette,
 };
 
 export function FeaturesPreview() {

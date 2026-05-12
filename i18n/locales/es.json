@@ -101,11 +101,11 @@
         "items": ["Administrar Disponibilidad", "Programación Fácil", "Confirmaciones Automáticas"]
       },
       {
-        "id": "news-events",
-        "title": "Gestión de Noticias y Eventos",
-        "description": "Crea y promociona eventos, envía anuncios dirigidos y mantén a tus clientes informados con herramientas integradas de gestión de noticias y eventos.",
-        "icon": "megaphone",
-        "items": ["Crear Eventos", "Enviar Anuncios", "Aumentar Engagement"]
+        "id": "website-theme-editor",
+        "title": "Editor de Tema Web",
+        "description": "Personaliza el aspecto y la sensación de tu sitio web con nuestro intuitivo editor de temas. Ajusta colores, fuentes y diseños en tiempo real para que coincidan perfectamente con la identidad de tu marca.",
+        "icon": "palette",
+        "items": ["Vista Previa en Tiempo Real", "Personalización de Marca", "Sin Código"]
       }
     ]
   },

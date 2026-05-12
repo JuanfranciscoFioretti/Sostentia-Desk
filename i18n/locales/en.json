@@ -101,11 +101,11 @@
           ,"items": ["Manage Availability", "Easy Scheduling", "Auto Confirmations"]
       },
       {
-        "id": "news-events",
-        "title": "News & Events Management",
-        "description": "Create and promote events, send targeted announcements, and keep your customers informed with integrated news and event management tools.",
-        "icon": "megaphone"
-          ,"items": ["Create Events", "Send Announcements", "Boost Engagement"]
+        "id": "website-theme-editor",
+        "title": "Website Theme Editor",
+        "description": "Customize your website's look and feel with our intuitive theme editor. Adjust colors, fonts, and layouts in real time to match your brand identity perfectly.",
+        "icon": "palette"
+          ,"items": ["Real-Time Preview", "Brand Customization", "No Code Required"]
       }
     ]
   },

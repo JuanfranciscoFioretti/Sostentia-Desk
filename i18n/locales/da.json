@@ -101,11 +101,11 @@
         "items": ["Administrer Tilgængelighed", "Nem Planlægning", "Automatiske Bekræftelser"]
       },
       {
-        "id": "news-events",
-        "title": "Nyheds- og Eventadministration",
-        "description": "Opret og promover begivenheder, send målrettede meddelelser og hold dine kunder informeret med integrerede nyheds- og eventadministrationsværktøjer.",
-        "icon": "megaphone",
-        "items": ["Opret Begivenheder", "Send Meddelelser", "Øg Engagement"]
+        "id": "website-theme-editor",
+        "title": "Website Tema-editor",
+        "description": "Tilpas din hjemmesides udseende og funktionalitet med vores intuitive temaeditor. Juster farver, skrifttyper og layouts i realtid, så de passer perfekt til din brandidentitet.",
+        "icon": "palette",
+        "items": ["Realtidsvisning", "Brandtilpasning", "Ingen Kode Nødvendig"]
       }
     ]
   },
